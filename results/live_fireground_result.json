@@ -1,0 +1,1546 @@
+{
+    "system": "Fireground AI",
+    "generated_at": "2026-09-16T18:56:54.251653",
+    "sensor_samples": 60,
+    "window_size": 10,
+    "ai_windows_processed": 51,
+    "window_statistics": {
+        "normal": 35,
+        "elevated": 1,
+        "high": 15
+    },
+    "overall_status": "HIGH",
+    "firefighter": "FF01",
+    "results": [
+        {
+            "window": 1,
+            "timestamp": "14:00:09",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "standing",
+                "activity_confidence": 0.9999994039535522,
+                "environment": "normal",
+                "environment_confidence": 0.9999598264694214,
+                "physiological_state": "normal",
+                "physiological_confidence": 0.9999728202819824
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 2,
+            "timestamp": "14:00:10",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "standing",
+                "activity_confidence": 0.9999994039535522,
+                "environment": "normal",
+                "environment_confidence": 0.9999525547027588,
+                "physiological_state": "normal",
+                "physiological_confidence": 0.9999685287475586
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 3,
+            "timestamp": "14:00:11",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "standing",
+                "activity_confidence": 0.9999990463256836,
+                "environment": "normal",
+                "environment_confidence": 0.9999364614486694,
+                "physiological_state": "normal",
+                "physiological_confidence": 0.999954342842102
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 4,
+            "timestamp": "14:00:12",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "standing",
+                "activity_confidence": 0.9999986886978149,
+                "environment": "normal",
+                "environment_confidence": 0.9999245405197144,
+                "physiological_state": "normal",
+                "physiological_confidence": 0.9999425411224365
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 5,
+            "timestamp": "14:00:13",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "standing",
+                "activity_confidence": 0.9999983310699463,
+                "environment": "normal",
+                "environment_confidence": 0.9999262094497681,
+                "physiological_state": "normal",
+                "physiological_confidence": 0.999934196472168
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 6,
+            "timestamp": "14:00:14",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "standing",
+                "activity_confidence": 0.9999978542327881,
+                "environment": "normal",
+                "environment_confidence": 0.999933123588562,
+                "physiological_state": "normal",
+                "physiological_confidence": 0.9999258518218994
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 7,
+            "timestamp": "14:00:15",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "standing",
+                "activity_confidence": 0.9999974966049194,
+                "environment": "normal",
+                "environment_confidence": 0.999934196472168,
+                "physiological_state": "normal",
+                "physiological_confidence": 0.9999172687530518
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 8,
+            "timestamp": "14:00:16",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "standing",
+                "activity_confidence": 0.9999977350234985,
+                "environment": "normal",
+                "environment_confidence": 0.9999362230300903,
+                "physiological_state": "normal",
+                "physiological_confidence": 0.9999203681945801
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 9,
+            "timestamp": "14:00:17",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "standing",
+                "activity_confidence": 0.9999980926513672,
+                "environment": "normal",
+                "environment_confidence": 0.9999444484710693,
+                "physiological_state": "normal",
+                "physiological_confidence": 0.9999364614486694
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 10,
+            "timestamp": "14:00:18",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "standing",
+                "activity_confidence": 0.9999984502792358,
+                "environment": "normal",
+                "environment_confidence": 0.9999487400054932,
+                "physiological_state": "normal",
+                "physiological_confidence": 0.9999446868896484
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 11,
+            "timestamp": "14:00:19",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "standing",
+                "activity_confidence": 0.9999984502792358,
+                "environment": "normal",
+                "environment_confidence": 0.9999508857727051,
+                "physiological_state": "normal",
+                "physiological_confidence": 0.9999463558197021
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 12,
+            "timestamp": "14:00:20",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "standing",
+                "activity_confidence": 0.9999983310699463,
+                "environment": "normal",
+                "environment_confidence": 0.9999376535415649,
+                "physiological_state": "normal",
+                "physiological_confidence": 0.999941349029541
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 13,
+            "timestamp": "14:00:21",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "standing",
+                "activity_confidence": 0.9999973773956299,
+                "environment": "normal",
+                "environment_confidence": 0.9999428987503052,
+                "physiological_state": "normal",
+                "physiological_confidence": 0.9999251365661621
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 14,
+            "timestamp": "14:00:22",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "standing",
+                "activity_confidence": 0.999993085861206,
+                "environment": "normal",
+                "environment_confidence": 0.9999308586120605,
+                "physiological_state": "normal",
+                "physiological_confidence": 0.9998531341552734
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 15,
+            "timestamp": "14:00:23",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "standing",
+                "activity_confidence": 0.9999767541885376,
+                "environment": "normal",
+                "environment_confidence": 0.9999001026153564,
+                "physiological_state": "normal",
+                "physiological_confidence": 0.999643087387085
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 16,
+            "timestamp": "14:00:24",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "standing",
+                "activity_confidence": 0.999915599822998,
+                "environment": "normal",
+                "environment_confidence": 0.9998693466186523,
+                "physiological_state": "normal",
+                "physiological_confidence": 0.9991436004638672
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 17,
+            "timestamp": "14:00:25",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "standing",
+                "activity_confidence": 0.9996383190155029,
+                "environment": "normal",
+                "environment_confidence": 0.999834418296814,
+                "physiological_state": "normal",
+                "physiological_confidence": 0.9972510933876038
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 18,
+            "timestamp": "14:00:26",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "standing",
+                "activity_confidence": 0.9973188042640686,
+                "environment": "normal",
+                "environment_confidence": 0.999830961227417,
+                "physiological_state": "normal",
+                "physiological_confidence": 0.9847490191459656
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 19,
+            "timestamp": "14:00:27",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "standing",
+                "activity_confidence": 0.9775211811065674,
+                "environment": "normal",
+                "environment_confidence": 0.9997268319129944,
+                "physiological_state": "normal",
+                "physiological_confidence": 0.8894102573394775
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 20,
+            "timestamp": "14:00:28",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "standing",
+                "activity_confidence": 0.8236948251724243,
+                "environment": "normal",
+                "environment_confidence": 0.9995747208595276,
+                "physiological_state": "elevated",
+                "physiological_confidence": 0.49114301800727844
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 21,
+            "timestamp": "14:00:29",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "walking",
+                "activity_confidence": 0.5670621991157532,
+                "environment": "normal",
+                "environment_confidence": 0.9994636178016663,
+                "physiological_state": "elevated",
+                "physiological_confidence": 0.8449068665504456
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 22,
+            "timestamp": "14:00:30",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "walking",
+                "activity_confidence": 0.9016773104667664,
+                "environment": "normal",
+                "environment_confidence": 0.9994359612464905,
+                "physiological_state": "elevated",
+                "physiological_confidence": 0.9703056812286377
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 23,
+            "timestamp": "14:00:31",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "walking",
+                "activity_confidence": 0.9793271422386169,
+                "environment": "normal",
+                "environment_confidence": 0.9993853569030762,
+                "physiological_state": "elevated",
+                "physiological_confidence": 0.9924002885818481
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 24,
+            "timestamp": "14:00:32",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "walking",
+                "activity_confidence": 0.9940314888954163,
+                "environment": "normal",
+                "environment_confidence": 0.999285876750946,
+                "physiological_state": "elevated",
+                "physiological_confidence": 0.9968120455741882
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 25,
+            "timestamp": "14:00:33",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "walking",
+                "activity_confidence": 0.9971871972084045,
+                "environment": "normal",
+                "environment_confidence": 0.9993712306022644,
+                "physiological_state": "elevated",
+                "physiological_confidence": 0.9979627132415771
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 26,
+            "timestamp": "14:00:34",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "walking",
+                "activity_confidence": 0.9986281394958496,
+                "environment": "normal",
+                "environment_confidence": 0.99946528673172,
+                "physiological_state": "elevated",
+                "physiological_confidence": 0.9983792304992676
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 27,
+            "timestamp": "14:00:35",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "walking",
+                "activity_confidence": 0.9994397759437561,
+                "environment": "normal",
+                "environment_confidence": 0.9995206594467163,
+                "physiological_state": "elevated",
+                "physiological_confidence": 0.9986647367477417
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 28,
+            "timestamp": "14:00:36",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "walking",
+                "activity_confidence": 0.9997324347496033,
+                "environment": "normal",
+                "environment_confidence": 0.9994827508926392,
+                "physiological_state": "elevated",
+                "physiological_confidence": 0.9987322688102722
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 29,
+            "timestamp": "14:00:37",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "walking",
+                "activity_confidence": 0.9998683929443359,
+                "environment": "normal",
+                "environment_confidence": 0.999479353427887,
+                "physiological_state": "elevated",
+                "physiological_confidence": 0.9987040758132935
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 30,
+            "timestamp": "14:00:38",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "walking",
+                "activity_confidence": 0.9999203681945801,
+                "environment": "normal",
+                "environment_confidence": 0.9995354413986206,
+                "physiological_state": "elevated",
+                "physiological_confidence": 0.9985581040382385
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 31,
+            "timestamp": "14:00:39",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "walking",
+                "activity_confidence": 0.9999532699584961,
+                "environment": "normal",
+                "environment_confidence": 0.9995951056480408,
+                "physiological_state": "elevated",
+                "physiological_confidence": 0.9983590245246887
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 32,
+            "timestamp": "14:00:40",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "walking",
+                "activity_confidence": 0.999962329864502,
+                "environment": "normal",
+                "environment_confidence": 0.999538779258728,
+                "physiological_state": "elevated",
+                "physiological_confidence": 0.9978430271148682
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 33,
+            "timestamp": "14:00:41",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "walking",
+                "activity_confidence": 0.9999490976333618,
+                "environment": "normal",
+                "environment_confidence": 0.9991708993911743,
+                "physiological_state": "elevated",
+                "physiological_confidence": 0.9962771534919739
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 34,
+            "timestamp": "14:00:42",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "walking",
+                "activity_confidence": 0.9996863603591919,
+                "environment": "normal",
+                "environment_confidence": 0.9954882264137268,
+                "physiological_state": "elevated",
+                "physiological_confidence": 0.9848266839981079
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 35,
+            "timestamp": "14:00:43",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "walking",
+                "activity_confidence": 0.9948843121528625,
+                "environment": "normal",
+                "environment_confidence": 0.9581079483032227,
+                "physiological_state": "elevated",
+                "physiological_confidence": 0.8654255270957947
+            },
+            "risk": {
+                "risk_score": 0,
+                "local_status": "NORMAL",
+                "event_type": "normal"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "NORMAL"
+            },
+            "command_center": {
+                "alert_priority": "LOW"
+            }
+        },
+        {
+            "window": 36,
+            "timestamp": "14:00:44",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "walking",
+                "activity_confidence": 0.857322633266449,
+                "environment": "normal",
+                "environment_confidence": 0.6028440594673157,
+                "physiological_state": "high",
+                "physiological_confidence": 0.726326584815979
+            },
+            "risk": {
+                "risk_score": 2,
+                "local_status": "ELEVATED",
+                "event_type": "physiological_alert"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "ELEVATED"
+            },
+            "command_center": {
+                "alert_priority": "MEDIUM"
+            }
+        },
+        {
+            "window": 37,
+            "timestamp": "14:00:45",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "crawling",
+                "activity_confidence": 0.8339212536811829,
+                "environment": "risk",
+                "environment_confidence": 0.9121135473251343,
+                "physiological_state": "high",
+                "physiological_confidence": 0.9783928394317627
+            },
+            "risk": {
+                "risk_score": 5,
+                "local_status": "HIGH",
+                "event_type": "deterioration"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "HIGH"
+            },
+            "command_center": {
+                "alert_priority": "HIGH"
+            }
+        },
+        {
+            "window": 38,
+            "timestamp": "14:00:46",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "crawling",
+                "activity_confidence": 0.9935194849967957,
+                "environment": "risk",
+                "environment_confidence": 0.993872880935669,
+                "physiological_state": "high",
+                "physiological_confidence": 0.9984728693962097
+            },
+            "risk": {
+                "risk_score": 5,
+                "local_status": "HIGH",
+                "event_type": "deterioration"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "HIGH"
+            },
+            "command_center": {
+                "alert_priority": "HIGH"
+            }
+        },
+        {
+            "window": 39,
+            "timestamp": "14:00:47",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "crawling",
+                "activity_confidence": 0.9996711015701294,
+                "environment": "risk",
+                "environment_confidence": 0.9995859265327454,
+                "physiological_state": "high",
+                "physiological_confidence": 0.9997629523277283
+            },
+            "risk": {
+                "risk_score": 5,
+                "local_status": "HIGH",
+                "event_type": "deterioration"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "HIGH"
+            },
+            "command_center": {
+                "alert_priority": "HIGH"
+            }
+        },
+        {
+            "window": 40,
+            "timestamp": "14:00:48",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "crawling",
+                "activity_confidence": 0.9999160766601562,
+                "environment": "risk",
+                "environment_confidence": 0.9999097585678101,
+                "physiological_state": "high",
+                "physiological_confidence": 0.9998973608016968
+            },
+            "risk": {
+                "risk_score": 5,
+                "local_status": "HIGH",
+                "event_type": "deterioration"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "HIGH"
+            },
+            "command_center": {
+                "alert_priority": "HIGH"
+            }
+        },
+        {
+            "window": 41,
+            "timestamp": "14:00:49",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "crawling",
+                "activity_confidence": 0.9999656677246094,
+                "environment": "risk",
+                "environment_confidence": 0.9999715089797974,
+                "physiological_state": "high",
+                "physiological_confidence": 0.9999408721923828
+            },
+            "risk": {
+                "risk_score": 5,
+                "local_status": "HIGH",
+                "event_type": "deterioration"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "HIGH"
+            },
+            "command_center": {
+                "alert_priority": "HIGH"
+            }
+        },
+        {
+            "window": 42,
+            "timestamp": "14:00:50",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "crawling",
+                "activity_confidence": 0.9999842643737793,
+                "environment": "risk",
+                "environment_confidence": 0.9999890327453613,
+                "physiological_state": "high",
+                "physiological_confidence": 0.9999741315841675
+            },
+            "risk": {
+                "risk_score": 5,
+                "local_status": "HIGH",
+                "event_type": "deterioration"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "HIGH"
+            },
+            "command_center": {
+                "alert_priority": "HIGH"
+            }
+        },
+        {
+            "window": 43,
+            "timestamp": "14:00:51",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "crawling",
+                "activity_confidence": 0.9999922513961792,
+                "environment": "risk",
+                "environment_confidence": 0.9999955892562866,
+                "physiological_state": "high",
+                "physiological_confidence": 0.9999856948852539
+            },
+            "risk": {
+                "risk_score": 5,
+                "local_status": "HIGH",
+                "event_type": "deterioration"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "HIGH"
+            },
+            "command_center": {
+                "alert_priority": "HIGH"
+            }
+        },
+        {
+            "window": 44,
+            "timestamp": "14:00:52",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "crawling",
+                "activity_confidence": 0.9999964237213135,
+                "environment": "risk",
+                "environment_confidence": 0.9999980926513672,
+                "physiological_state": "high",
+                "physiological_confidence": 0.999993085861206
+            },
+            "risk": {
+                "risk_score": 5,
+                "local_status": "HIGH",
+                "event_type": "deterioration"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "HIGH"
+            },
+            "command_center": {
+                "alert_priority": "HIGH"
+            }
+        },
+        {
+            "window": 45,
+            "timestamp": "14:00:53",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "crawling",
+                "activity_confidence": 0.9999984502792358,
+                "environment": "risk",
+                "environment_confidence": 0.9999991655349731,
+                "physiological_state": "high",
+                "physiological_confidence": 0.9999969005584717
+            },
+            "risk": {
+                "risk_score": 5,
+                "local_status": "HIGH",
+                "event_type": "deterioration"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "HIGH"
+            },
+            "command_center": {
+                "alert_priority": "HIGH"
+            }
+        },
+        {
+            "window": 46,
+            "timestamp": "14:00:54",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "crawling",
+                "activity_confidence": 0.9999994039535522,
+                "environment": "risk",
+                "environment_confidence": 0.9999997615814209,
+                "physiological_state": "high",
+                "physiological_confidence": 0.9999985694885254
+            },
+            "risk": {
+                "risk_score": 5,
+                "local_status": "HIGH",
+                "event_type": "deterioration"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "HIGH"
+            },
+            "command_center": {
+                "alert_priority": "HIGH"
+            }
+        },
+        {
+            "window": 47,
+            "timestamp": "14:00:55",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "crawling",
+                "activity_confidence": 0.9999998807907104,
+                "environment": "risk",
+                "environment_confidence": 0.9999998807907104,
+                "physiological_state": "high",
+                "physiological_confidence": 0.9999995231628418
+            },
+            "risk": {
+                "risk_score": 5,
+                "local_status": "HIGH",
+                "event_type": "deterioration"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "HIGH"
+            },
+            "command_center": {
+                "alert_priority": "HIGH"
+            }
+        },
+        {
+            "window": 48,
+            "timestamp": "14:00:56",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "crawling",
+                "activity_confidence": 1.0,
+                "environment": "risk",
+                "environment_confidence": 1.0,
+                "physiological_state": "high",
+                "physiological_confidence": 0.9999998807907104
+            },
+            "risk": {
+                "risk_score": 5,
+                "local_status": "HIGH",
+                "event_type": "deterioration"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "HIGH"
+            },
+            "command_center": {
+                "alert_priority": "HIGH"
+            }
+        },
+        {
+            "window": 49,
+            "timestamp": "14:00:57",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "crawling",
+                "activity_confidence": 1.0,
+                "environment": "risk",
+                "environment_confidence": 1.0,
+                "physiological_state": "high",
+                "physiological_confidence": 1.0
+            },
+            "risk": {
+                "risk_score": 5,
+                "local_status": "HIGH",
+                "event_type": "deterioration"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "HIGH"
+            },
+            "command_center": {
+                "alert_priority": "HIGH"
+            }
+        },
+        {
+            "window": 50,
+            "timestamp": "14:00:58",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "crawling",
+                "activity_confidence": 1.0,
+                "environment": "risk",
+                "environment_confidence": 1.0,
+                "physiological_state": "high",
+                "physiological_confidence": 1.0
+            },
+            "risk": {
+                "risk_score": 5,
+                "local_status": "HIGH",
+                "event_type": "deterioration"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "HIGH"
+            },
+            "command_center": {
+                "alert_priority": "HIGH"
+            }
+        },
+        {
+            "window": 51,
+            "timestamp": "14:00:59",
+            "firefighter": {
+                "node_id": "FF01",
+                "x": 10,
+                "y": 20,
+                "zone": "A"
+            },
+            "ai_prediction": {
+                "activity": "crawling",
+                "activity_confidence": 1.0,
+                "environment": "risk",
+                "environment_confidence": 1.0,
+                "physiological_state": "high",
+                "physiological_confidence": 1.0
+            },
+            "risk": {
+                "risk_score": 5,
+                "local_status": "HIGH",
+                "event_type": "deterioration"
+            },
+            "zone": {
+                "zone_id": "A",
+                "zone_status": "HIGH"
+            },
+            "command_center": {
+                "alert_priority": "HIGH"
+            }
+        }
+    ]
+}

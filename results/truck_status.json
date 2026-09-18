@@ -1,0 +1,9 @@
+{
+    "truck_id": "TRUCK01",
+    "water_capacity_liters": 3000,
+    "water_remaining_liters": 1860,
+    "flow_rate_liters_per_minute": 18,
+    "pump_status": "ON",
+    "water_remaining_percent": 62.0,
+    "estimated_remaining_minutes": 103.33
+}

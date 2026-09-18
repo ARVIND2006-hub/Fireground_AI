@@ -1,0 +1,86 @@
+{
+    "timestamp": "2026-09-16T18:28:30.842304",
+    "firefighter_event": {
+        "node_id": "FF01",
+        "timestamp": "2026-09-16T18:28:30.838671",
+        "activity": "crawling",
+        "activity_confidence": 1.0,
+        "environment": "risk",
+        "environment_confidence": 1.0,
+        "physiological_state": "high",
+        "physiological_confidence": 1.0,
+        "risk_score": 5,
+        "situational_status": "HIGH",
+        "event_type": "deterioration",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+    },
+    "all_firefighter_events": [
+        {
+            "node_id": "FF01",
+            "timestamp": "2026-09-16T18:28:30.838671",
+            "activity": "crawling",
+            "activity_confidence": 1.0,
+            "environment": "risk",
+            "environment_confidence": 1.0,
+            "physiological_state": "high",
+            "physiological_confidence": 1.0,
+            "risk_score": 5,
+            "situational_status": "HIGH",
+            "event_type": "deterioration",
+            "x": 10,
+            "y": 20,
+            "zone": "A"
+        },
+        {
+            "node_id": "FF02",
+            "x": 12,
+            "y": 21,
+            "activity": "walking",
+            "environment": "risk",
+            "physiological_state": "elevated",
+            "situational_status": "ELEVATED",
+            "event_type": "environment_change",
+            "zone": "A"
+        },
+        {
+            "node_id": "FF03",
+            "x": 50,
+            "y": 60,
+            "activity": "standing",
+            "environment": "normal",
+            "physiological_state": "normal",
+            "situational_status": "NORMAL",
+            "event_type": "status_update",
+            "zone": "B"
+        }
+    ],
+    "zones": {
+        "A": {
+            "firefighters": 2,
+            "high_events": 1,
+            "elevated_events": 1,
+            "environment_risk": 2,
+            "status": "ELEVATED"
+        },
+        "B": {
+            "firefighters": 1,
+            "high_events": 0,
+            "elevated_events": 0,
+            "environment_risk": 0,
+            "status": "NORMAL"
+        }
+    },
+    "truck": {
+        "truck_id": "TRUCK01",
+        "water_capacity_liters": 3000,
+        "water_remaining_liters": 1860,
+        "flow_rate_liters_per_minute": 18,
+        "pump_status": "ON",
+        "water_remaining_percent": 62.0,
+        "estimated_remaining_minutes": 103.33
+    },
+    "fireground_status": "ELEVATED",
+    "alert_priority": "HIGH"
+}

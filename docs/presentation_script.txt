@@ -1,0 +1,161 @@
+FIREGROUND AI — PRESENTATION SCRIPT
+===================================
+
+1. INTRODUCTION
+
+Say:
+
+"Fireground AI is a software prototype for monitoring
+firefighter conditions using sensor data and a multitask
+artificial intelligence model.
+
+The system analyzes firefighter activity, physiological
+state, and environmental conditions.
+
+These AI outputs are then combined by a risk decision
+engine to determine the current fireground status."
+
+2. SYSTEM ARCHITECTURE
+
+Show:
+assets/rtosf.png
+
+Say:
+
+"The system starts with sensor data. The data is converted
+into a sliding window, preprocessed and quantized to INT8.
+
+The INT8 data is then processed by the Microchip VectorBlox
+VNNX model.
+
+The model produces three outputs:
+activity, physiological state, and environmental condition.
+
+These outputs are passed to the risk decision engine,
+which generates the final fireground status."
+
+
+3. LIVE SENSOR PROCESSING
+
+Show the terminal.
+
+Run:
+
+./run_demo.sh
+
+Say:
+
+"Now I will demonstrate the complete software pipeline.
+
+The system reads a simulated live sensor stream containing
+60 sensor samples.
+
+A sliding window of 10 samples is created, giving
+51 overlapping AI windows.
+
+Each window is standardized and converted to INT8 format
+before being processed by the VNNX model."
+
+4. AI INFERENCE
+
+While the windows are being processed, say:
+
+"For every window, the model generates three predictions.
+
+The first output identifies the firefighter activity.
+
+The second output identifies the physiological state.
+
+The third output identifies the environmental condition."
+
+5. RISK DECISION
+
+When the final windows show crawling, elevated physiology,
+and environmental risk, say:
+
+"The three AI outputs are then passed to the risk decision
+engine.
+
+The current implementation uses these conditions to
+calculate a fireground risk score.
+
+The result is classified as NORMAL, ELEVATED, or HIGH."
+
+
+6. DASHBOARD
+
+Show:
+
+python3 dashboard/fireground_dashboard.py
+
+Say:
+
+"The dashboard summarizes the processed sensor data and
+shows the firefighter ID, number of samples, AI windows,
+window statistics, current status, and alert priority.
+
+For this simulation, 37 windows are NORMAL and 14 are
+ELEVATED, giving an overall status of ELEVATED."
+
+7. RISK GRAPH
+
+Show:
+
+results/fireground_risk_progression.png
+
+Say:
+
+"This graph shows how the risk score changes across the
+51 AI windows.
+
+The beginning of the stream is normal. Later, the activity
+changes to crawling and the environment becomes risky,
+which increases the calculated risk score."
+
+
+8. FINAL RESULT
+
+Show the final terminal summary.
+
+Say:
+
+"The complete software demonstration processes 60 sensor
+samples through 51 overlapping AI windows.
+
+The final simulation contains 37 NORMAL windows and
+14 ELEVATED windows, with 0 HIGH windows.
+
+The overall simulated fireground status is ELEVATED."
+
+9. CURRENT LIMITATION
+
+Say:
+
+"At the current stage, the system is running as a
+software-only VNNX simulation.
+
+The physical target platform is the Microchip PolarFire
+SoC Icicle Kit, but hardware deployment has not yet been
+performed."
+
+10. FUTURE IMPLEMENTATION
+
+Say:
+
+"The next stage is to connect real firefighter sensors,
+deploy the VNNX model on the target hardware, and connect
+the AI output to a real-time alert and command-center
+interface."
+
+11. CONCLUSION
+
+Say:
+
+"This project demonstrates the complete software pipeline
+from sensor data acquisition and preprocessing to
+INT8 VNNX inference and fireground risk analysis.
+
+The simulation provides a reproducible environment for
+testing the complete AI decision pipeline before hardware
+deployment."
+

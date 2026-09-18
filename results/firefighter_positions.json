@@ -1,0 +1,20 @@
+[
+    {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "status": "HIGH"
+    },
+    {
+        "node_id": "FF02",
+        "x": 12,
+        "y": 21,
+        "status": "ELEVATED"
+    },
+    {
+        "node_id": "FF03",
+        "x": 50,
+        "y": 60,
+        "status": "NORMAL"
+    }
+]

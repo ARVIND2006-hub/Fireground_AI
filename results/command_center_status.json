@@ -1,0 +1,24 @@
+{
+    "firefighter": {
+        "node_id": "FF01",
+        "activity": "crawling",
+        "environment": "risk",
+        "physiological_state": "high",
+        "situational_status": "HIGH",
+        "event_type": "deterioration"
+    },
+    "fireground": {
+        "high_zones": 0,
+        "elevated_zones": 1,
+        "environment_risk_zones": 1,
+        "overall_status": "ELEVATED",
+        "alert_priority": "HIGH"
+    },
+    "truck": {
+        "truck_id": "TRUCK01",
+        "water_remaining_liters": 1860,
+        "water_remaining_percent": 62.0,
+        "flow_rate_liters_per_minute": 18,
+        "estimated_remaining_minutes": 103.33
+    }
+}

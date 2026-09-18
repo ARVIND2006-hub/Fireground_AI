@@ -1,0 +1,10 @@
+{
+    "node_id": "FF01",
+    "timestamp": "2026-09-16T18:15:37.760823",
+    "activity": "crawling",
+    "environment": "risk",
+    "physiological_state": "high",
+    "risk_score": 5,
+    "situational_status": "HIGH",
+    "event_type": "deterioration"
+}

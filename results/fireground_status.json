@@ -1,0 +1,7 @@
+{
+    "number_of_firefighters": 3,
+    "high_events": 1,
+    "elevated_events": 1,
+    "environment_risk_nodes": 2,
+    "fireground_status": "ELEVATED"
+}

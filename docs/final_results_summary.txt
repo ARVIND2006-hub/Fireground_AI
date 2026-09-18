@@ -1,0 +1,61 @@
+FIREGROUND AI — VERIFIED FINAL RESULTS
+======================================
+
+Implementation:
+Software-only Microchip VectorBlox VNNX simulation
+
+Input:
+60 sensor samples
+
+Sliding-window processing:
+Window size = 10 samples
+AI windows processed = 51
+
+VNNX outputs:
+Output 0 = Activity
+Output 1 = Physiological state
+Output 2 = Environment
+
+Class mappings:
+
+Activity:
+0 = crawling
+1 = standing
+2 = walking
+
+Physiological:
+0 = elevated
+1 = high
+2 = normal
+
+Environment:
+0 = normal
+1 = risk
+
+Risk engine:
+Environment risk = +2
+Crawling activity = +1
+High physiology = +2
+
+Status:
+Score 0–1 = NORMAL
+Score 2–3 = ELEVATED
+Score 4+ = HIGH
+
+Verified simulation result:
+NORMAL = 37 windows
+ELEVATED = 14 windows
+HIGH = 0 windows
+
+OVERALL STATUS = ELEVATED
+
+Generated files:
+results/live_vnnx_fireground_result.json
+results/fireground_risk_progression.png
+dashboard/fireground_dashboard.py
+assets/rtosf.png
+
+Final package:
+Fireground_AI_Final.zip
+Windows location:
+C:\Users\Asus\Downloads\Fireground_AI_Final.zip

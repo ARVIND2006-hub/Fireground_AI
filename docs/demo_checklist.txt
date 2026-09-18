@@ -1,0 +1,48 @@
+FIREGROUND AI — FINAL DEMO CHECKLIST
+====================================
+
+1. Open Ubuntu / WSL terminal.
+
+2. Go to the project:
+   cd /mnt/c/Users/Asus/Fireground_AI
+
+3. Run the complete demonstration:
+   ./run_demo.sh
+
+4. Show that the system processes:
+   - 60 sensor samples
+   - 51 sliding windows
+
+5. Show AI outputs:
+   - Activity
+   - Physiological state
+   - Environment
+
+6. Show risk analysis:
+   - Risk score
+   - NORMAL / ELEVATED / HIGH
+   - Alert priority
+
+7. Show final result:
+   - NORMAL windows: 37
+   - ELEVATED windows: 14
+   - HIGH windows: 0
+   - Overall status: ELEVATED
+
+8. Open the dashboard:
+   python3 dashboard/fireground_dashboard.py
+
+9. Show the risk graph:
+   results/fireground_risk_progression.png
+
+10. Show the architecture diagram:
+    assets/rtosf.png
+
+11. Show the generated JSON:
+    results/live_vnnx_fireground_result.json
+
+12. Explain that the current implementation is
+    software-only VNNX simulation.
+
+13. Final project package:
+    Fireground_AI_Final.zip

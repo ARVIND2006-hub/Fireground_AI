@@ -1,0 +1,25 @@
+{
+    "model_name": "Fireground AI Multitask CNN V2",
+    "input_shape": [
+        null,
+        10,
+        9
+    ],
+    "number_of_outputs": 3,
+    "output_shapes": [
+        [
+            null,
+            3
+        ],
+        [
+            null,
+            2
+        ],
+        [
+            null,
+            3
+        ]
+    ],
+    "trainable_parameters": 3336,
+    "weights_count": 12
+}

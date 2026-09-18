@@ -1,0 +1,154 @@
+{
+    "conv1d_weight_0": {
+        "original_shape": [
+            3,
+            9,
+            16
+        ],
+        "original_dtype": "float32",
+        "quantized_dtype": "int8",
+        "min": -0.3640824258327484,
+        "max": 0.36512109637260437,
+        "scale": 0.002874969271942973,
+        "quantized_min": -127,
+        "quantized_max": 127
+    },
+    "conv1d_weight_1": {
+        "original_shape": [
+            16
+        ],
+        "original_dtype": "float32",
+        "quantized_dtype": "int8",
+        "min": 0.044300880283117294,
+        "max": 0.09229089319705963,
+        "scale": 0.0007266999455168843,
+        "quantized_min": 61,
+        "quantized_max": 127
+    },
+    "conv1d_1_weight_0": {
+        "original_shape": [
+            3,
+            16,
+            32
+        ],
+        "original_dtype": "float32",
+        "quantized_dtype": "int8",
+        "min": -0.2991280257701874,
+        "max": 0.29859939217567444,
+        "scale": 0.0023553387727588415,
+        "quantized_min": -127,
+        "quantized_max": 127
+    },
+    "conv1d_1_weight_1": {
+        "original_shape": [
+            32
+        ],
+        "original_dtype": "float32",
+        "quantized_dtype": "int8",
+        "min": -0.041276343166828156,
+        "max": 0.07366133481264114,
+        "scale": 0.0005800105282105505,
+        "quantized_min": -71,
+        "quantized_max": 127
+    },
+    "dense_weight_0": {
+        "original_shape": [
+            32,
+            32
+        ],
+        "original_dtype": "float32",
+        "quantized_dtype": "int8",
+        "min": -0.4291089177131653,
+        "max": 0.4158118963241577,
+        "scale": 0.0033788103610277176,
+        "quantized_min": -127,
+        "quantized_max": 123
+    },
+    "dense_weight_1": {
+        "original_shape": [
+            32
+        ],
+        "original_dtype": "float32",
+        "quantized_dtype": "int8",
+        "min": -0.04529536888003349,
+        "max": 0.06959383934736252,
+        "scale": 0.0005479829851537943,
+        "quantized_min": -83,
+        "quantized_max": 127
+    },
+    "activity_weight_0": {
+        "original_shape": [
+            32,
+            3
+        ],
+        "original_dtype": "float32",
+        "quantized_dtype": "int8",
+        "min": -0.5013437271118164,
+        "max": 0.448184072971344,
+        "scale": 0.003947588615119457,
+        "quantized_min": -127,
+        "quantized_max": 114
+    },
+    "activity_weight_1": {
+        "original_shape": [
+            3
+        ],
+        "original_dtype": "float32",
+        "quantized_dtype": "int8",
+        "min": -0.02426949515938759,
+        "max": 0.04590111970901489,
+        "scale": 0.00036142615135759115,
+        "quantized_min": -67,
+        "quantized_max": 127
+    },
+    "environment_weight_0": {
+        "original_shape": [
+            32,
+            2
+        ],
+        "original_dtype": "float32",
+        "quantized_dtype": "int8",
+        "min": -0.4914296567440033,
+        "max": 0.4967748522758484,
+        "scale": 0.003911613021045923,
+        "quantized_min": -126,
+        "quantized_max": 127
+    },
+    "environment_weight_1": {
+        "original_shape": [
+            2
+        ],
+        "original_dtype": "float32",
+        "quantized_dtype": "int8",
+        "min": -0.02070334181189537,
+        "max": 0.02070334367454052,
+        "scale": 0.00016301845607813448,
+        "quantized_min": -127,
+        "quantized_max": 127
+    },
+    "physiological_weight_0": {
+        "original_shape": [
+            32,
+            3
+        ],
+        "original_dtype": "float32",
+        "quantized_dtype": "int8",
+        "min": -0.5016407370567322,
+        "max": 0.5342258810997009,
+        "scale": 0.004206502810120583,
+        "quantized_min": -119,
+        "quantized_max": 127
+    },
+    "physiological_weight_1": {
+        "original_shape": [
+            3
+        ],
+        "original_dtype": "float32",
+        "quantized_dtype": "int8",
+        "min": -0.06369362026453018,
+        "max": 0.06581595540046692,
+        "scale": 0.0005182358436286449,
+        "quantized_min": -123,
+        "quantized_max": 127
+    }
+}

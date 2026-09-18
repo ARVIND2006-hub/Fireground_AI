@@ -1,0 +1,44 @@
+FIREGROUND AI PROJECT STATUS
+============================
+
+Target Platform:
+Microchip PolarFire SoC Icicle Kit
+
+Current implementation:
+Software-only VNNX simulation (no hardware currently available)
+
+AI pipeline:
+- Fireground sensor dataset prepared
+- Multitask CNN trained
+- INT8 model created
+- VectorBlox-compatible model created
+- VNNX model compiled
+- VNNX simulator tested
+- Live 60-sample stream processed
+- 51 sliding windows processed
+- Risk decision engine integrated
+- JSON result generated
+- Dashboard created
+- Risk progression graph created
+- System architecture diagram created
+
+Current live simulation result:
+- Normal windows: 37
+- Elevated windows: 14
+- High windows: 0
+- Overall status: ELEVATED
+
+Main result file:
+results/live_vnnx_fireground_result.json
+
+Risk graph:
+results/fireground_risk_progression.png
+
+Architecture diagram:
+assets/rtosf.png
+
+Dashboard:
+dashboard/fireground_dashboard.py
+
+VNNX model:
+models/fireground_v2_V250_ncomp.vnnx

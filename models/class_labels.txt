@@ -1,0 +1,4 @@
+0=combined_risk
+1=environment_risk
+2=normal
+3=walking
