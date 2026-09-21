@@ -1,7 +1,7 @@
 {
     "system": "Fireground AI",
     "inference_engine": "Microchip VectorBlox VNNX simulator",
-    "generated_at": "2026-09-18T18:23:52.751218",
+    "generated_at": "2026-09-21T08:40:12.308209",
     "sensor_samples": 60,
     "window_size": 10,
     "ai_windows_processed": 51,
