@@ -235,10 +235,19 @@ function render(){
     </footer>`;
 }
 
-fetch("./data/dashboard_data.json", {cache:"no-store"})
-  .then(r=>{ if(!r.ok) throw new Error("Could not load dashboard data"); return r.json(); })
-  .then(d=>{ D=d; render(); })
-  .catch(err=>{ document.getElementById("app").innerHTML=`<div class="card panel"><h2>Dashboard data could not be loaded</h2><p class="note">${esc(err.message)}</p></div>`; });
+async function loadLive(){
+  try{
+    const r=await fetch("/api/latest?ts="+Date.now(), {cache:"no-store"});
+    if(r.status===404){ throw new Error("Waiting for the first VNNX result update…"); }
+    if(!r.ok){ throw new Error("Live result API returned HTTP "+r.status); }
+    D=await r.json();
+    render();
+  }catch(err){
+    document.getElementById("app").innerHTML=`<div class="card panel"><h2>Waiting for live VNNX data</h2><p class="note">${esc(err.message)}</p><p class="note">The local publisher must send a result to <code>/api/update</code>.</p></div>`;
+  }
+}
+loadLive();
+setInterval(loadLive, 2000);
 </script>
 </body>
 </html>
