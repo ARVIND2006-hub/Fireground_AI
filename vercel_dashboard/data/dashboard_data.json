@@ -1,0 +1,2316 @@
+{
+  "generated_at": "2026-09-18T18:23:52.751218",
+  "system": "Fireground AI",
+  "inference_engine": "Microchip VectorBlox VNNX simulator",
+  "sensor_samples": 60,
+  "window_size": 10,
+  "ai_windows_processed": 51,
+  "window_statistics": {
+    "normal": 37,
+    "elevated": 14,
+    "high": 0
+  },
+  "overall_status": "ELEVATED",
+  "firefighter": "FF01",
+  "results": [
+    {
+      "window": 1,
+      "timestamp": "14:00:09",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "standing",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 2,
+      "timestamp": "14:00:10",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "standing",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 3,
+      "timestamp": "14:00:11",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "standing",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 4,
+      "timestamp": "14:00:12",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "standing",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 5,
+      "timestamp": "14:00:13",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "standing",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 6,
+      "timestamp": "14:00:14",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "standing",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 7,
+      "timestamp": "14:00:15",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "standing",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 8,
+      "timestamp": "14:00:16",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "standing",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 9,
+      "timestamp": "14:00:17",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "standing",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 10,
+      "timestamp": "14:00:18",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "standing",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 11,
+      "timestamp": "14:00:19",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "standing",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 12,
+      "timestamp": "14:00:20",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "standing",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 13,
+      "timestamp": "14:00:21",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "standing",
+        "activity_confidence": 0.9921875,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 14,
+      "timestamp": "14:00:22",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "standing",
+        "activity_confidence": 0.984375,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 15,
+      "timestamp": "14:00:23",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "standing",
+        "activity_confidence": 0.96875,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 16,
+      "timestamp": "14:00:24",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "standing",
+        "activity_confidence": 0.9140625,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 17,
+      "timestamp": "14:00:25",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "standing",
+        "activity_confidence": 0.76171875,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 18,
+      "timestamp": "14:00:26",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "walking",
+        "activity_confidence": 0.625,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 19,
+      "timestamp": "14:00:27",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "walking",
+        "activity_confidence": 0.90234375,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 20,
+      "timestamp": "14:00:28",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "walking",
+        "activity_confidence": 0.98046875,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 21,
+      "timestamp": "14:00:29",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "walking",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.9921875,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 22,
+      "timestamp": "14:00:30",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "walking",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.96875,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 23,
+      "timestamp": "14:00:31",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "walking",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.859375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 24,
+      "timestamp": "14:00:32",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "walking",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "normal",
+        "physiological_confidence": 0.6015625,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 25,
+      "timestamp": "14:00:33",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "walking",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.75,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 26,
+      "timestamp": "14:00:34",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "walking",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.88671875,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 27,
+      "timestamp": "14:00:35",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "walking",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.9453125,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 28,
+      "timestamp": "14:00:36",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "walking",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.96484375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 29,
+      "timestamp": "14:00:37",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "walking",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.9765625,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 30,
+      "timestamp": "14:00:38",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "walking",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.984375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 31,
+      "timestamp": "14:00:39",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "walking",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.98828125,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 32,
+      "timestamp": "14:00:40",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "walking",
+        "activity_confidence": 0.99609375,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 33,
+      "timestamp": "14:00:41",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "walking",
+        "activity_confidence": 0.9921875,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 34,
+      "timestamp": "14:00:42",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "walking",
+        "activity_confidence": 0.98046875,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 35,
+      "timestamp": "14:00:43",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "walking",
+        "activity_confidence": 0.9140625,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.9921875
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 36,
+      "timestamp": "14:00:44",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "walking",
+        "activity_confidence": 0.53125,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.94921875
+      },
+      "risk": {
+        "risk_score": 0,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 37,
+      "timestamp": "14:00:45",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "crawling",
+        "activity_confidence": 0.80859375,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.99609375,
+        "environment": "normal",
+        "environment_confidence": 0.73828125
+      },
+      "risk": {
+        "risk_score": 1,
+        "local_status": "NORMAL",
+        "event_type": "normal"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "NORMAL"
+      },
+      "command_center": {
+        "alert_priority": "LOW"
+      }
+    },
+    {
+      "window": 38,
+      "timestamp": "14:00:46",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "crawling",
+        "activity_confidence": 0.84375,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.99609375,
+        "environment": "risk",
+        "environment_confidence": 0.625
+      },
+      "risk": {
+        "risk_score": 3,
+        "local_status": "ELEVATED",
+        "event_type": "environmental_risk"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "ELEVATED"
+      },
+      "command_center": {
+        "alert_priority": "MEDIUM"
+      }
+    },
+    {
+      "window": 39,
+      "timestamp": "14:00:47",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "crawling",
+        "activity_confidence": 0.84375,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.99609375,
+        "environment": "risk",
+        "environment_confidence": 0.9140625
+      },
+      "risk": {
+        "risk_score": 3,
+        "local_status": "ELEVATED",
+        "event_type": "environmental_risk"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "ELEVATED"
+      },
+      "command_center": {
+        "alert_priority": "MEDIUM"
+      }
+    },
+    {
+      "window": 40,
+      "timestamp": "14:00:48",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "crawling",
+        "activity_confidence": 0.859375,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.99609375,
+        "environment": "risk",
+        "environment_confidence": 0.97265625
+      },
+      "risk": {
+        "risk_score": 3,
+        "local_status": "ELEVATED",
+        "event_type": "environmental_risk"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "ELEVATED"
+      },
+      "command_center": {
+        "alert_priority": "MEDIUM"
+      }
+    },
+    {
+      "window": 41,
+      "timestamp": "14:00:49",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "crawling",
+        "activity_confidence": 0.84375,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.99609375,
+        "environment": "risk",
+        "environment_confidence": 0.9921875
+      },
+      "risk": {
+        "risk_score": 3,
+        "local_status": "ELEVATED",
+        "event_type": "environmental_risk"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "ELEVATED"
+      },
+      "command_center": {
+        "alert_priority": "MEDIUM"
+      }
+    },
+    {
+      "window": 42,
+      "timestamp": "14:00:50",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "crawling",
+        "activity_confidence": 0.859375,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.99609375,
+        "environment": "risk",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 3,
+        "local_status": "ELEVATED",
+        "event_type": "environmental_risk"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "ELEVATED"
+      },
+      "command_center": {
+        "alert_priority": "MEDIUM"
+      }
+    },
+    {
+      "window": 43,
+      "timestamp": "14:00:51",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "crawling",
+        "activity_confidence": 0.859375,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.99609375,
+        "environment": "risk",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 3,
+        "local_status": "ELEVATED",
+        "event_type": "environmental_risk"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "ELEVATED"
+      },
+      "command_center": {
+        "alert_priority": "MEDIUM"
+      }
+    },
+    {
+      "window": 44,
+      "timestamp": "14:00:52",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "crawling",
+        "activity_confidence": 0.859375,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.99609375,
+        "environment": "risk",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 3,
+        "local_status": "ELEVATED",
+        "event_type": "environmental_risk"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "ELEVATED"
+      },
+      "command_center": {
+        "alert_priority": "MEDIUM"
+      }
+    },
+    {
+      "window": 45,
+      "timestamp": "14:00:53",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "crawling",
+        "activity_confidence": 0.890625,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.99609375,
+        "environment": "risk",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 3,
+        "local_status": "ELEVATED",
+        "event_type": "environmental_risk"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "ELEVATED"
+      },
+      "command_center": {
+        "alert_priority": "MEDIUM"
+      }
+    },
+    {
+      "window": 46,
+      "timestamp": "14:00:54",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "crawling",
+        "activity_confidence": 0.890625,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.99609375,
+        "environment": "risk",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 3,
+        "local_status": "ELEVATED",
+        "event_type": "environmental_risk"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "ELEVATED"
+      },
+      "command_center": {
+        "alert_priority": "MEDIUM"
+      }
+    },
+    {
+      "window": 47,
+      "timestamp": "14:00:55",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "crawling",
+        "activity_confidence": 0.9140625,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.99609375,
+        "environment": "risk",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 3,
+        "local_status": "ELEVATED",
+        "event_type": "environmental_risk"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "ELEVATED"
+      },
+      "command_center": {
+        "alert_priority": "MEDIUM"
+      }
+    },
+    {
+      "window": 48,
+      "timestamp": "14:00:56",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "crawling",
+        "activity_confidence": 0.9296875,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.99609375,
+        "environment": "risk",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 3,
+        "local_status": "ELEVATED",
+        "event_type": "environmental_risk"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "ELEVATED"
+      },
+      "command_center": {
+        "alert_priority": "MEDIUM"
+      }
+    },
+    {
+      "window": 49,
+      "timestamp": "14:00:57",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "crawling",
+        "activity_confidence": 0.95703125,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.99609375,
+        "environment": "risk",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 3,
+        "local_status": "ELEVATED",
+        "event_type": "environmental_risk"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "ELEVATED"
+      },
+      "command_center": {
+        "alert_priority": "MEDIUM"
+      }
+    },
+    {
+      "window": 50,
+      "timestamp": "14:00:58",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "crawling",
+        "activity_confidence": 0.96875,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.99609375,
+        "environment": "risk",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 3,
+        "local_status": "ELEVATED",
+        "event_type": "environmental_risk"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "ELEVATED"
+      },
+      "command_center": {
+        "alert_priority": "MEDIUM"
+      }
+    },
+    {
+      "window": 51,
+      "timestamp": "14:00:59",
+      "firefighter": {
+        "node_id": "FF01",
+        "x": 10,
+        "y": 20,
+        "zone": "A"
+      },
+      "ai_prediction": {
+        "activity": "crawling",
+        "activity_confidence": 0.98046875,
+        "physiological_state": "elevated",
+        "physiological_confidence": 0.99609375,
+        "environment": "risk",
+        "environment_confidence": 0.99609375
+      },
+      "risk": {
+        "risk_score": 3,
+        "local_status": "ELEVATED",
+        "event_type": "environmental_risk"
+      },
+      "zone": {
+        "zone_id": "A",
+        "zone_status": "ELEVATED"
+      },
+      "command_center": {
+        "alert_priority": "MEDIUM"
+      }
+    }
+  ],
+  "sensor_stream": [
+    {
+      "timestamp": "14:00:00",
+      "heart_rate": 75.99342830602247,
+      "acc_x": 0.14569089569224075,
+      "acc_y": 0.19297539875829994,
+      "acc_z": 9.788293152152542,
+      "gyro_x": 0.01789606407753696,
+      "gyro_y": 0.023837173645764546,
+      "gyro_z": 0.007652628070325239,
+      "gas": 19.72347139765763,
+      "temperature": 30.259075415240275
+    },
+    {
+      "timestamp": "14:00:01",
+      "heart_rate": 76.08512008717193,
+      "acc_x": 0.10725886814698103,
+      "acc_y": 0.14260159266026606,
+      "acc_z": 9.71375410837435,
+      "gyro_x": 0.007188562353795136,
+      "gyro_y": 0.014935844398327881,
+      "gyro_z": 0.01157123666297637,
+      "gas": 19.073164614375074,
+      "temperature": 29.813708098571897
+    },
+    {
+      "timestamp": "14:00:02",
+      "heart_rate": 73.18395184895758,
+      "acc_x": 0.09322671098540394,
+      "acc_y": 0.20202584614063773,
+      "acc_z": 9.728762590689328,
+      "gyro_x": 0.007278086377374086,
+      "gyro_y": 0.02055461294854933,
+      "gyro_z": 0.004245032112888486,
+      "gas": 17.175392597329417,
+      "temperature": 30.58625950756862
+    },
+    {
+      "timestamp": "14:00:03",
+      "heart_rate": 75.75139603669135,
+      "acc_x": 0.0819488016331181,
+      "acc_y": 0.25556834553526814,
+      "acc_z": 9.799325138763104,
+      "gyro_x": 0.004711445355220499,
+      "gyro_y": 0.024112724560515945,
+      "gyro_z": 0.003895781750144889,
+      "gas": 18.79872262016239,
+      "temperature": 29.883322500082688
+    },
+    {
+      "timestamp": "14:00:04",
+      "heart_rate": 75.41772719000951,
+      "acc_x": 0.1059058370760737,
+      "acc_y": 0.22215399739986233,
+      "acc_z": 9.808568414059499,
+      "gyro_x": 0.009421758588058798,
+      "gyro_y": 0.018494481522053557,
+      "gyro_z": 0.002607390048162863,
+      "gas": 16.08065975224045,
+      "temperature": 29.468725580440626
+    },
+    {
+      "timestamp": "14:00:05",
+      "heart_rate": 73.56031158321058,
+      "acc_x": 0.11030854868705385,
+      "acc_y": 0.147108795339118,
+      "acc_z": 9.816204198469741,
+      "gyro_x": 0.008074588597918417,
+      "gyro_y": 0.016615389998470207,
+      "gyro_z": 0.013058381444204339,
+      "gas": 19.078722458080424,
+      "temperature": 30.422848890487565
+    },
+    {
+      "timestamp": "14:00:06",
+      "heart_rate": 77.06199904499191,
+      "acc_x": 0.09072362872446357,
+      "acc_y": 0.20993790294210693,
+      "acc_z": 9.848777256356119,
+      "gyro_x": 0.007604128810773551,
+      "gyro_y": 0.019071705116680916,
+      "gyro_z": 0.004468325129969859,
+      "gas": 21.862560238232398,
+      "temperature": 29.664312990710943
+    },
+    {
+      "timestamp": "14:00:07",
+      "heart_rate": 72.60758675183865,
+      "acc_x": 0.09783969635258999,
+      "acc_y": 0.23010598693676074,
+      "acc_z": 9.818081801252383,
+      "gyro_x": 0.006774401226974379,
+      "gyro_y": 0.02180697802754207,
+      "gyro_z": 0.017690182832329846,
+      "gas": 21.625051644788396,
+      "temperature": 30.54249601142833
+    },
+    {
+      "timestamp": "14:00:08",
+      "heart_rate": 74.9283479217801,
+      "acc_x": 0.12465707513125672,
+      "acc_y": 0.20261141204714514,
+      "acc_z": 9.785049632476706,
+      "gyro_x": 0.010458803882677512,
+      "gyro_y": 0.010062155426995536,
+      "gyro_z": 0.00890164056081244,
+      "gas": 23.129287311628012,
+      "temperature": 28.952101958364103
+    },
+    {
+      "timestamp": "14:00:09",
+      "heart_rate": 75.7142251430235,
+      "acc_x": 0.07574519191320438,
+      "acc_y": 0.1849472886924639,
+      "acc_z": 9.845770105885105,
+      "gyro_x": 0.011643755548298423,
+      "gyro_y": 0.017351198981164807,
+      "gyro_z": 0.012566337165566781,
+      "gas": 22.955788089483033,
+      "temperature": 29.79269191269054
+    },
+    {
+      "timestamp": "14:00:10",
+      "heart_rate": 75.19415509869609,
+      "acc_x": 0.09017013560206696,
+      "acc_y": 0.1882367554060353,
+      "acc_z": 9.726824252593396,
+      "gyro_x": 0.011480601385322881,
+      "gyro_y": 0.021305276360899447,
+      "gyro_z": 0.010025567283212305,
+      "gas": 21.937289981065778,
+      "temperature": 29.719178762449058
+    },
+    {
+      "timestamp": "14:00:11",
+      "heart_rate": 74.5308257332497,
+      "acc_x": 0.08971856450419692,
+      "acc_y": 0.17593168192335146,
+      "acc_z": 9.7919357144167,
+      "gyro_x": 0.012020254284072692,
+      "gyro_y": 0.029430929506052653,
+      "gyro_z": 0.010872889064159195,
+      "gas": 17.169258515899173,
+      "temperature": 29.831741870893858
+    },
+    {
+      "timestamp": "14:00:12",
+      "heart_rate": 75.51510078144553,
+      "acc_x": 0.0992045837365235,
+      "acc_y": 0.2018069062982308,
+      "acc_z": 9.923162105624264,
+      "gyro_x": 0.009038195176094388,
+      "gyro_y": 0.021507736711668064,
+      "gyro_z": 0.009826441151473783,
+      "gas": 19.851108168467665,
+      "temperature": 29.232491513880383
+    },
+    {
+      "timestamp": "14:00:13",
+      "heart_rate": 72.66264392476094,
+      "acc_x": 0.12373095841129142,
+      "acc_y": 0.17271837635615783,
+      "acc_z": 9.870139715546806,
+      "gyro_x": 0.0029907446860385958,
+      "gyro_y": 0.02293428546900135,
+      "gyro_z": 0.020952278129049894,
+      "gas": 22.285645629030043,
+      "temperature": 30.30077321307471
+    },
+    {
+      "timestamp": "14:00:14",
+      "heart_rate": 73.01892734973862,
+      "acc_x": 0.08489573037651403,
+      "acc_y": 0.15348009706801602,
+      "acc_z": 9.803428148740302,
+      "gyro_x": 0.004688481431369475,
+      "gyro_y": 0.022367962153175908,
+      "gyro_z": 0.005402878828830985,
+      "gas": 18.867404540794457,
+      "temperature": 30.039860546035058
+    },
+    {
+      "timestamp": "14:00:15",
+      "heart_rate": 78.09986881003508,
+      "acc_x": 0.1244055165210901,
+      "acc_y": 0.16307407050698136,
+      "acc_z": 9.811372996730206,
+      "gyro_x": 0.016535713771412143,
+      "gyro_y": 0.011962583827193863,
+      "gyro_z": 0.010923169292661522,
+      "gas": 18.433493415327526,
+      "temperature": 29.87117539351773
+    },
+    {
+      "timestamp": "14:00:16",
+      "heart_rate": 75.51976558849685,
+      "acc_x": 0.060386301607471715,
+      "acc_y": 0.21565824696850694,
+      "acc_z": 9.81484923366166,
+      "gyro_x": 0.011252464251729382,
+      "gyro_y": 0.02173224104748488,
+      "gyro_z": 0.006599876392107546,
+      "gas": 21.56364574355462,
+      "temperature": 29.505219715648767
+    },
+    {
+      "timestamp": "14:00:17",
+      "heart_rate": 75.46450739432201,
+      "acc_x": 0.1559732353343427,
+      "acc_y": 0.21421498762735364,
+      "acc_z": 9.740434825139868,
+      "gyro_x": 0.01328276804316915,
+      "gyro_y": 0.015126591648863392,
+      "gyro_z": 0.01393542301871226,
+      "gas": 20.58614494659736,
+      "temperature": 29.714259432789454
+    },
+    {
+      "timestamp": "14:00:18",
+      "heart_rate": 77.31719115801481,
+      "acc_x": 0.11238342780809496,
+      "acc_y": 0.22466180479983472,
+      "acc_z": 9.894839649132699,
+      "gyro_x": 0.008773059419985648,
+      "gyro_y": 0.016231319178212553,
+      "gyro_z": 0.005552427851872384,
+      "gas": 18.358635363296578,
+      "temperature": 30.38535045169773
+    },
+    {
+      "timestamp": "14:00:19",
+      "heart_rate": 73.36837943006913,
+      "acc_x": 0.10830072397990058,
+      "acc_y": 0.22481549747108073,
+      "acc_z": 9.800650094593896,
+      "gyro_x": 0.017267670385786586,
+      "gyro_y": 0.01867671583381022,
+      "gyro_z": 0.023600845832948095,
+      "gas": 19.845796581171793,
+      "temperature": 30.13646078992666
+    },
+    {
+      "timestamp": "14:00:20",
+      "heart_rate": 81.25133469553002,
+      "acc_x": 0.21447417245729558,
+      "acc_y": 0.18882686073370747,
+      "acc_z": 9.749980034586446,
+      "gyro_x": 0.022366188122867725,
+      "gyro_y": 0.019635855436715637,
+      "gyro_z": 0.0057660314096579755,
+      "gas": 18.285684887167434,
+      "temperature": 29.571643000775556
+    },
+    {
+      "timestamp": "14:00:21",
+      "heart_rate": 77.47030555062827,
+      "acc_x": 0.22142281232390615,
+      "acc_y": 0.13771306106440062,
+      "acc_z": 9.712122664809582,
+      "gyro_x": 0.023926586898644183,
+      "gyro_y": 0.017580712818994332,
+      "gyro_z": 0.012768625529727639,
+      "gas": 19.106970095865957,
+      "temperature": 30.39255951772939
+    },
+    {
+      "timestamp": "14:00:22",
+      "heart_rate": 81.116417436892,
+      "acc_x": 0.24682353579104704,
+      "acc_y": 0.25415256215876386,
+      "acc_z": 9.773766143642442,
+      "gyro_x": 0.017111653160214544,
+      "gyro_y": 0.019310874800424385,
+      "gyro_z": 0.016575176336043298,
+      "gas": 17.714059404338755,
+      "temperature": 30.243114944139315
+    },
+    {
+      "timestamp": "14:00:23",
+      "heart_rate": 82.52757190182442,
+      "acc_x": 0.262126715320795,
+      "acc_y": 0.25677828200902997,
+      "acc_z": 9.766780123444523,
+      "gyro_x": 0.029256956256528993,
+      "gyro_y": 0.024423653776798275,
+      "gyro_z": 0.01979484610246634,
+      "gas": 21.030095372612095,
+      "temperature": 31.69109259626189
+    },
+    {
+      "timestamp": "14:00:24",
+      "heart_rate": 80.45434957092486,
+      "acc_x": 0.2624562241815897,
+      "acc_y": 0.31573292833367544,
+      "acc_z": 9.569291436518577,
+      "gyro_x": 0.03143130095187257,
+      "gyro_y": 0.019936420644051742,
+      "gyro_z": 0.015640340671052834,
+      "gas": 19.526362786519982,
+      "temperature": 30.00585458086836
+    },
+    {
+      "timestamp": "14:00:25",
+      "heart_rate": 84.67790119393473,
+      "acc_x": 0.253540888722201,
+      "acc_y": 0.23397988744673381,
+      "acc_z": 9.6488743357798,
+      "gyro_x": 0.031082292947909873,
+      "gyro_y": 0.030227859199519067,
+      "gyro_z": 0.016741998261970915,
+      "gas": 20.128560038190926,
+      "temperature": 29.818902088828278
+    },
+    {
+      "timestamp": "14:00:26",
+      "heart_rate": 87.28788817865065,
+      "acc_x": 0.2955936294430829,
+      "acc_y": 0.1669106767615806,
+      "acc_z": 9.759670333435736,
+      "gyro_x": 0.0280373963078365,
+      "gyro_y": 0.031426317792665505,
+      "gyro_z": 0.024524936394902285,
+      "gas": 21.267838044636022,
+      "temperature": 29.489942965336958
+    },
+    {
+      "timestamp": "14:00:27",
+      "heart_rate": 85.23151038834024,
+      "acc_x": 0.2907516406651713,
+      "acc_y": 0.16733353837131443,
+      "acc_z": 9.823581796819676,
+      "gyro_x": 0.03602490855480478,
+      "gyro_y": 0.027695580228324777,
+      "gyro_z": 0.02858930973527388,
+      "gas": 17.59940718588845,
+      "temperature": 30.21619950566362
+    },
+    {
+      "timestamp": "14:00:28",
+      "heart_rate": 88.24431239402527,
+      "acc_x": 0.30547297781401245,
+      "acc_y": 0.26334555745933114,
+      "acc_z": 9.650463137406685,
+      "gyro_x": 0.03821909714073115,
+      "gyro_y": 0.039873170267146686,
+      "gyro_z": 0.021365347642109588,
+      "gas": 22.064930521102294,
+      "temperature": 29.792252013618395
+    },
+    {
+      "timestamp": "14:00:29",
+      "heart_rate": 84.3809492878764,
+      "acc_x": 0.3274229554582052,
+      "acc_y": 0.13761084090175754,
+      "acc_z": 9.814268791275214,
+      "gyro_x": 0.030849293110196845,
+      "gyro_y": 0.03579977756651509,
+      "gyro_z": 0.02865370288643046,
+      "gas": 13.517465319861856,
+      "temperature": 30.040244943466284
+    },
+    {
+      "timestamp": "14:00:30",
+      "heart_rate": 87.88254657813224,
+      "acc_x": 0.3503069918305876,
+      "acc_y": 0.15092456744760246,
+      "acc_z": 9.732347243198427,
+      "gyro_x": 0.04099529847786735,
+      "gyro_y": 0.03699891561420603,
+      "gyro_z": 0.030349010424950095,
+      "gas": 17.128275697641122,
+      "temperature": 30.965265500861985
+    },
+    {
+      "timestamp": "14:00:31",
+      "heart_rate": 84.72937280627647,
+      "acc_x": 0.41258050448436057,
+      "acc_y": 0.13810922505865755,
+      "acc_z": 9.849312336225937,
+      "gyro_x": 0.032239561002387486,
+      "gyro_y": 0.04124107452482208,
+      "gyro_z": 0.03494158603242288,
+      "gas": 20.227034690502496,
+      "temperature": 30.81485226980842
+    },
+    {
+      "timestamp": "14:00:32",
+      "heart_rate": 86.56198373547006,
+      "acc_x": 0.365209971960235,
+      "acc_y": 0.17053176215278942,
+      "acc_z": 9.75947214679147,
+      "gyro_x": 0.04578507742982523,
+      "gyro_y": 0.040535452023696725,
+      "gyro_z": 0.038497999377166255,
+      "gas": 18.75460096035881,
+      "temperature": 30.516751099857093
+    },
+    {
+      "timestamp": "14:00:33",
+      "heart_rate": 87.11459904175322,
+      "acc_x": 0.37013014967233787,
+      "acc_y": 0.17199094799015152,
+      "acc_z": 9.752310552358628,
+      "gyro_x": 0.04905185132716732,
+      "gyro_y": 0.04589549203017926,
+      "gyro_z": 0.036586636916543916,
+      "gas": 21.62572423767792,
+      "temperature": 30.901851536769442
+    },
+    {
+      "timestamp": "14:00:34",
+      "heart_rate": 89.55532979157685,
+      "acc_x": 0.40393422042698324,
+      "acc_y": 0.189115939838639,
+      "acc_z": 9.776914379639102,
+      "gyro_x": 0.05212708174494015,
+      "gyro_y": 0.05206754818000319,
+      "gyro_z": 0.04452739403577165,
+      "gas": 18.81685722232834,
+      "temperature": 30.918838952468015
+    },
+    {
+      "timestamp": "14:00:35",
+      "heart_rate": 87.54200768326552,
+      "acc_x": 0.43472499057465325,
+      "acc_y": 0.19349284728161578,
+      "acc_z": 9.706789717549489,
+      "gyro_x": 0.05297578512718457,
+      "gyro_y": 0.04590889658383264,
+      "gyro_z": 0.0504619363784273,
+      "gas": 21.363905942589927,
+      "temperature": 30.625893297362616
+    },
+    {
+      "timestamp": "14:00:36",
+      "heart_rate": 85.9879652370006,
+      "acc_x": 0.46374988081888807,
+      "acc_y": 0.23120599085260776,
+      "acc_z": 9.743984185648499,
+      "gyro_x": 0.05193876613576543,
+      "gyro_y": 0.04751372814257085,
+      "gyro_z": 0.04237902279096863,
+      "gas": 17.571622774424537,
+      "temperature": 31.26324434940003
+    },
+    {
+      "timestamp": "14:00:37",
+      "heart_rate": 87.14567657697577,
+      "acc_x": 0.4302350840962247,
+      "acc_y": 0.18393070791735033,
+      "acc_z": 9.728905201799293,
+      "gyro_x": 0.05118137723598013,
+      "gyro_y": 0.04988889802216785,
+      "gyro_z": 0.045218436057459566,
+      "gas": 21.9502394668355,
+      "temperature": 30.791177047399145
+    },
+    {
+      "timestamp": "14:00:38",
+      "heart_rate": 89.48993314221744,
+      "acc_x": 0.47696149812072913,
+      "acc_y": 0.1275957829251338,
+      "acc_z": 9.60147753579364,
+      "gyro_x": 0.05240777889373783,
+      "gyro_y": 0.05493276424144077,
+      "gyro_z": 0.04755453782799003,
+      "gas": 18.98611364925774,
+      "temperature": 30.71158467775267
+    },
+    {
+      "timestamp": "14:00:39",
+      "heart_rate": 92.4507124338991,
+      "acc_x": 0.4844295137629193,
+      "acc_y": 0.14987353176810958,
+      "acc_z": 9.698704080480532,
+      "gyro_x": 0.0565567068053993,
+      "gyro_y": 0.05961359280169044,
+      "gyro_z": 0.043863845282238384,
+      "gas": 21.71531924640404,
+      "temperature": 30.886024588014628
+    },
+    {
+      "timestamp": "14:00:40",
+      "heart_rate": 91.03869302848234,
+      "acc_x": 0.41606846888395765,
+      "acc_y": 0.33450719958555564,
+      "acc_z": 9.575926771686849,
+      "gyro_x": 0.0413445548908625,
+      "gyro_y": 0.04007555440469077,
+      "gyro_z": 0.03058605659129299,
+      "gas": 38.06547782600516,
+      "temperature": 32.95649594061726
+    },
+    {
+      "timestamp": "14:00:41",
+      "heart_rate": 89.45398043228907,
+      "acc_x": 0.4680457443118017,
+      "acc_y": 0.3479635413042603,
+      "acc_z": 9.719190947450693,
+      "gyro_x": 0.03739591462267171,
+      "gyro_y": 0.04723392382032407,
+      "gyro_z": 0.03310005203443011,
+      "gas": 37.049020348517885,
+      "temperature": 33.49919931649818
+    },
+    {
+      "timestamp": "14:00:42",
+      "heart_rate": 96.37960586643534,
+      "acc_x": 0.39602429418223917,
+      "acc_y": 0.19380521378450966,
+      "acc_z": 9.548454698699155,
+      "gyro_x": 0.03944520403067781,
+      "gyro_y": 0.044902362718857246,
+      "gyro_z": 0.03605053585466296,
+      "gas": 37.3834034292897,
+      "temperature": 33.26411126312769
+    },
+    {
+      "timestamp": "14:00:43",
+      "heart_rate": 96.75234167843178,
+      "acc_x": 0.39406341314606574,
+      "acc_y": 0.3245959585753253,
+      "acc_z": 9.490786007578762,
+      "gyro_x": 0.05698875259512612,
+      "gyro_y": 0.053076640724327724,
+      "gyro_z": 0.03318494608737177,
+      "gas": 42.9008476763721,
+      "temperature": 33.66923853773504
+    },
+    {
+      "timestamp": "14:00:44",
+      "heart_rate": 90.57373094181824,
+      "acc_x": 0.4895126524789385,
+      "acc_y": 0.22027861706028162,
+      "acc_z": 9.524037498622775,
+      "gyro_x": 0.0480314621983091,
+      "gyro_y": 0.04828188356258845,
+      "gyro_z": 0.035299607171124535,
+      "gas": 45.707744748330825,
+      "temperature": 34.15418406189895
+    },
+    {
+      "timestamp": "14:00:45",
+      "heart_rate": 96.245699864695,
+      "acc_x": 0.45481182526847597,
+      "acc_y": 0.32572194170293745,
+      "acc_z": 9.592696892685332,
+      "gyro_x": 0.04325214744897279,
+      "gyro_y": 0.04079531497558627,
+      "gyro_z": 0.04766606093139106,
+      "gas": 42.86475914123481,
+      "temperature": 34.44304820599148
+    },
+    {
+      "timestamp": "14:00:46",
+      "heart_rate": 96.66462802395918,
+      "acc_x": 0.4646269853717144,
+      "acc_y": 0.3589648592031913,
+      "acc_z": 9.544051108884606,
+      "gyro_x": 0.06436448754929193,
+      "gyro_y": 0.06253204505465923,
+      "gyro_z": 0.040506215109125554,
+      "gas": 45.50302692688689,
+      "temperature": 35.420460790209006
+    },
+    {
+      "timestamp": "14:00:47",
+      "heart_rate": 98.94314190190872,
+      "acc_x": 0.43140306157679587,
+      "acc_y": 0.33430257299992194,
+      "acc_z": 9.593505469210974,
+      "gyro_x": 0.04344756308146131,
+      "gyro_y": 0.04690044892400535,
+      "gyro_z": 0.031764606933439396,
+      "gas": 50.290751899170296,
+      "temperature": 35.64745262301294
+    },
+    {
+      "timestamp": "14:00:48",
+      "heart_rate": 97.46118633111088,
+      "acc_x": 0.48296379121679106,
+      "acc_y": 0.38143077727856456,
+      "acc_z": 9.437193912507107,
+      "gyro_x": 0.04577970536386907,
+      "gyro_y": 0.05566671380662029,
+      "gyro_z": 0.048304392693635845,
+      "gas": 52.435084511591924,
+      "temperature": 36.00094282083841
+    },
+    {
+      "timestamp": "14:00:49",
+      "heart_rate": 98.93461050381181,
+      "acc_x": 0.43782121997980583,
+      "acc_y": 0.3334836274415019,
+      "acc_z": 9.53199589476581,
+      "gyro_x": 0.05236072128203587,
+      "gyro_y": 0.05491679849597984,
+      "gyro_z": 0.04164471886866629,
+      "gas": 48.86511579992025,
+      "temperature": 35.66435198419489
+    },
+    {
+      "timestamp": "14:00:50",
+      "heart_rate": 99.87464180545366,
+      "acc_x": 0.5201618606207138,
+      "acc_y": 0.27348711908137796,
+      "acc_z": 9.452427630064259,
+      "gyro_x": 0.05935781784027265,
+      "gyro_y": 0.05378854606548375,
+      "gyro_z": 0.04667810416791691,
+      "gas": 56.91028464100248,
+      "temperature": 35.60570958146578
+    },
+    {
+      "timestamp": "14:00:51",
+      "heart_rate": 98.6042442148223,
+      "acc_x": 0.4820109796802966,
+      "acc_y": 0.3106989955367111,
+      "acc_z": 9.48326031701855,
+      "gyro_x": 0.06067418240280066,
+      "gyro_y": 0.06568500020026055,
+      "gyro_z": 0.05654504626028383,
+      "gas": 60.92945026583278,
+      "temperature": 36.314105420788685
+    },
+    {
+      "timestamp": "14:00:52",
+      "heart_rate": 100.93899770477894,
+      "acc_x": 0.42792315341057663,
+      "acc_y": 0.2242404468900724,
+      "acc_z": 9.562012456046672,
+      "gyro_x": 0.0738698062810077,
+      "gyro_y": 0.06250578376266173,
+      "gyro_z": 0.057459341778334595,
+      "gas": 57.84836351871064,
+      "temperature": 36.489979321139344
+    },
+    {
+      "timestamp": "14:00:53",
+      "heart_rate": 103.62250030908707,
+      "acc_x": 0.5248832963407694,
+      "acc_y": 0.2522229779699787,
+      "acc_z": 9.373613220784545,
+      "gyro_x": 0.06722078181520334,
+      "gyro_y": 0.06146189552829418,
+      "gyro_z": 0.04746647774241396,
+      "gas": 67.15776161691048,
+      "temperature": 37.347829964573826
+    },
+    {
+      "timestamp": "14:00:54",
+      "heart_rate": 102.70685423151495,
+      "acc_x": 0.5752655902779781,
+      "acc_y": 0.29960136793416914,
+      "acc_z": 9.5487966483334,
+      "gyro_x": 0.06846420984588572,
+      "gyro_y": 0.06283229479203042,
+      "gyro_z": 0.06713874446361794,
+      "gas": 60.83690399277121,
+      "temperature": 37.87485665402903
+    },
+    {
+      "timestamp": "14:00:55",
+      "heart_rate": 106.07782008736932,
+      "acc_x": 0.5149752698646097,
+      "acc_y": 0.2308600134517832,
+      "acc_z": 9.505570652851898,
+      "gyro_x": 0.08145649984282079,
+      "gyro_y": 0.06160859455708516,
+      "gyro_z": 0.06337781542014342,
+      "gas": 62.925507691347086,
+      "temperature": 37.42386452876656
+    },
+    {
+      "timestamp": "14:00:56",
+      "heart_rate": 104.69871486175634,
+      "acc_x": 0.5254403692128075,
+      "acc_y": 0.30242608139724136,
+      "acc_z": 9.390142993015337,
+      "gyro_x": 0.07362274095467904,
+      "gyro_y": 0.07169857134330519,
+      "gyro_z": 0.060566311718801544,
+      "gas": 66.0257492324706,
+      "temperature": 37.56304243030445
+    },
+    {
+      "timestamp": "14:00:57",
+      "heart_rate": 105.18487267591681,
+      "acc_x": 0.5900366875049753,
+      "acc_y": 0.2511222377600724,
+      "acc_z": 9.435959938325754,
+      "gyro_x": 0.07850832274023074,
+      "gyro_y": 0.06398356831327177,
+      "gyro_z": 0.06726016115427962,
+      "gas": 67.84645733886333,
+      "temperature": 38.402156490330306
+    },
+    {
+      "timestamp": "14:00:58",
+      "heart_rate": 106.6747524821083,
+      "acc_x": 0.5078047159734194,
+      "acc_y": 0.21862287810584186,
+      "acc_z": 9.422885096799682,
+      "gyro_x": 0.0775583350103289,
+      "gyro_y": 0.07057410024937356,
+      "gyro_z": 0.06983155475266424,
+      "gas": 72.14119733718631,
+      "temperature": 38.09469633738299
+    },
+    {
+      "timestamp": "14:00:59",
+      "heart_rate": 105.67695987546207,
+      "acc_x": 0.5639265556879137,
+      "acc_y": 0.3023699335658207,
+      "acc_z": 9.358375198082962,
+      "gyro_x": 0.07569266673462105,
+      "gyro_y": 0.08403775685528664,
+      "gyro_z": 0.06453864878286111,
+      "gas": 72.86784040270537,
+      "temperature": 38.21559352009502
+    }
+  ],
+  "sensor_channels": [
+    {
+      "key": "heart_rate",
+      "name": "Heart Rate",
+      "unit": "bpm"
+    },
+    {
+      "key": "acc_x",
+      "name": "Accelerometer X",
+      "unit": "g"
+    },
+    {
+      "key": "acc_y",
+      "name": "Accelerometer Y",
+      "unit": "g"
+    },
+    {
+      "key": "acc_z",
+      "name": "Accelerometer Z",
+      "unit": "g"
+    },
+    {
+      "key": "gyro_x",
+      "name": "Gyroscope X",
+      "unit": "\u00b0/s"
+    },
+    {
+      "key": "gyro_y",
+      "name": "Gyroscope Y",
+      "unit": "\u00b0/s"
+    },
+    {
+      "key": "gyro_z",
+      "name": "Gyroscope Z",
+      "unit": "\u00b0/s"
+    },
+    {
+      "key": "gas",
+      "name": "Gas",
+      "unit": "ppm"
+    },
+    {
+      "key": "temperature",
+      "name": "Temperature",
+      "unit": "\u00b0C"
+    }
+  ]
+}

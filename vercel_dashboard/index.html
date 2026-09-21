@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fireground AI • Vercel Dashboard</title>
+<style>
+:root{
+  --bg:#06101d;--panel:#0d1a2b;--panel2:#091525;--border:#20334d;
+  --text:#edf5ff;--muted:#8191ab;--cyan:#65d9ff;
+  --green:#4fe0a2;--amber:#ffd166;--red:#ff6478;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:radial-gradient(circle at 10% 0%,#102b48 0,#06101d 35%,#050c16 100%);
+  color:var(--text);font-family:Inter,Segoe UI,Arial,sans-serif
+}
+.wrap{max-width:1440px;margin:auto;padding:28px}
+.top{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin-bottom:20px}
+.eyebrow{font-size:11px;letter-spacing:.16em;font-weight:800;color:var(--muted)}
+h1{margin:7px 0 0;font-size:36px;letter-spacing:-.03em}
+h1 span{color:var(--cyan);font-weight:600}
+.actions{display:flex;gap:10px;align-items:center}
+button{background:#14263f;border:1px solid var(--border);color:var(--text);border-radius:9px;padding:10px 13px;cursor:pointer}
+button:hover{border-color:var(--cyan)}
+.live{font-size:11px;color:var(--muted);display:flex;align-items:center;gap:6px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--green);display:inline-block}
+.card{
+  background:linear-gradient(180deg,var(--panel),var(--panel2));
+  border:1px solid var(--border);border-radius:16px;
+  box-shadow:0 18px 55px rgba(0,0,0,.18)
+}
+.hero{display:grid;grid-template-columns:1.25fr .75fr 1fr;gap:15px}
+.status{padding:22px;min-height:185px}
+.label{color:var(--muted);font-size:10px;font-weight:800;letter-spacing:.13em}
+.big{font-size:58px;font-weight:900;margin:22px 0 4px}
+.normal .big{color:var(--green)} .elevated .big{color:var(--amber)} .high .big{color:var(--red)}
+.gauge{padding:20px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring{width:150px;height:150px;border-radius:50%;background:conic-gradient(var(--cyan) var(--p),#1b2d48 0);display:grid;place-items:center;margin-top:10px}
+.ring-in{width:111px;height:111px;border-radius:50%;background:var(--panel);display:flex;flex-direction:column;align-items:center;justify-content:center}
+.ring-in strong{font-size:39px}.ring-in span{font-size:11px;color:var(--muted)}
+.meta{padding:21px}.latest{font-size:22px;font-weight:750;margin:17px 0}
+.row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--border);color:var(--muted)}
+.row strong{color:var(--text)}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:15px 0}
+.stat{padding:17px}.stat strong{display:block;font-size:34px}.stat span{display:block;margin-top:3px;color:var(--muted);font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:800}
+.stat.normal strong{color:var(--green)} .stat.elevated strong{color:var(--amber)} .stat.high strong{color:var(--red)}
+.panel{padding:22px;margin-top:15px}
+.panel-head{display:flex;justify-content:space-between;gap:15px;align-items:flex-end;margin-bottom:17px}
+h2{margin:6px 0 0;font-size:21px}
+.note{font-size:11px;color:var(--muted)}
+.pred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.pred{padding:15px;border:1px solid var(--border);border-radius:12px;background:#091526;display:grid;grid-template-columns:42px 1fr auto;gap:12px;align-items:center}
+.icon{width:40px;height:40px;border-radius:11px;background:#152944;color:var(--cyan);display:grid;place-items:center;font-weight:900}
+.pred small{display:block;color:var(--muted);font-size:9px;letter-spacing:.12em;font-weight:800}
+.pred strong{display:block;font-size:20px;margin-top:5px}
+.conf{color:var(--cyan);font-weight:800;font-size:12px}
+.sensor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.sensor{padding:14px;border:1px solid var(--border);border-radius:12px;background:#091526}
+.sensor-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+.sensor-name{font-weight:750}.sensor-unit{font-size:10px;color:var(--muted);margin-top:2px}
+.sensor-value{font-size:24px;font-weight:850;color:var(--cyan)}
+.sensor-meta{font-size:10px;color:var(--muted);margin-top:3px;text-align:right}
+.mini{height:135px;margin-top:9px;border:1px solid #1b2a42;border-radius:9px;background:#07111f;overflow:hidden}
+.mini svg{width:100%;height:100%;display:block}
+.gridline{stroke:#203149;stroke-width:1}.spark{fill:none;stroke:var(--cyan);stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round}.point{fill:var(--cyan)}
+.chart{padding:10px;background:#07111f;border:1px solid var(--border);border-radius:12px}
+.chart svg{display:block;width:100%;height:275px}
+.axis{fill:#63738e;font-size:10px}.riskline{fill:none;stroke:var(--cyan);stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.bar.normal{fill:rgba(79,224,162,.36)}.bar.elevated{fill:rgba(255,209,102,.38)}.bar.high{fill:rgba(255,100,120,.42)}
+.legend{display:flex;gap:15px;color:var(--muted);font-size:11px}.legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
+.legend .n{background:var(--green)}.legend .e{background:var(--amber)}.legend .h{background:var(--red)}
+.table-wrap{overflow:auto;border:1px solid var(--border);border-radius:12px;margin-top:10px}
+table{border-collapse:collapse;width:100%;min-width:760px}th,td{padding:10px 12px;border-bottom:1px solid var(--border);text-align:left;font-size:12px}
+th{font-size:9px;color:var(--muted);letter-spacing:.12em}tr:last-child td{border-bottom:0}
+.pill{padding:4px 7px;border-radius:99px;font-weight:800;font-size:10px}.pill.normal{color:var(--green);background:rgba(79,224,162,.09)}.pill.elevated{color:var(--amber);background:rgba(255,209,102,.09)}.pill.high{color:var(--red);background:rgba(255,100,120,.09)}
+.map{height:270px;border:1px solid var(--border);border-radius:12px;background:#07111f;position:relative;overflow:hidden}
+.map:before,.map:after{content:"";position:absolute;background:#1a2a42}.map:before{left:25%;top:0;bottom:0;width:1px;box-shadow:180px 0 #1a2a42,360px 0 #1a2a42,540px 0 #1a2a42}.map:after{top:25%;left:0;right:0;height:1px;box-shadow:0 65px #1a2a42,0 130px #1a2a42,0 195px #1a2a42}
+.marker{position:absolute;width:18px;height:18px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 8px rgba(101,217,255,.11),0 0 28px rgba(101,217,255,.55);transform:translate(-50%,-50%);z-index:2}
+.map-label{position:absolute;left:14px;top:12px;color:var(--muted);font-size:10px;letter-spacing:.1em;font-weight:800;z-index:3}
+.map-badge{position:absolute;right:12px;top:12px;padding:7px 9px;background:#101e34;border:1px solid var(--border);border-radius:9px;font-size:11px;z-index:3}
+footer{display:flex;flex-wrap:wrap;gap:18px;padding:18px 2px 4px;color:var(--muted);font-size:11px}
+footer strong{color:var(--text)}
+@media(max-width:1050px){.hero{grid-template-columns:1fr}.sensor-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:740px){.wrap{padding:16px}.top{flex-direction:column}.stats{grid-template-columns:repeat(2,1fr)}.pred-grid{grid-template-columns:1fr}.sensor-grid{grid-template-columns:1fr}.big{font-size:46px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <div class="eyebrow">FIREGROUND AI • VNNX • ONLINE DASHBOARD</div>
+      <h1>Fireground AI <span>Command Dashboard</span></h1>
+    </div>
+    <div class="actions">
+      <button onclick="location.reload()">Refresh</button>
+      <div class="live"><span class="dot"></span> DATA SNAPSHOT</div>
+    </div>
+  </header>
+
+  <div id="app"></div>
+</div>
+
+<script>
+let D=null;
+
+const esc = v => String(v ?? "").replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]));
+const statusClass = s => ({NORMAL:"normal",ELEVATED:"elevated",HIGH:"high"}[String(s||"").toUpperCase()]||"normal");
+const pct = v => (Number(v||0)*100).toFixed(1)+"%";
+
+function lineSvg(values, width=520, height=135){
+  const pad={l:16,r:9,t:10,b:18}, pw=width-pad.l-pad.r, ph=height-pad.t-pad.b;
+  const nums=values.map(Number), min=Math.min(...nums), max=Math.max(...nums);
+  const range=(max-min)||1;
+  const points=nums.map((v,i)=>{
+    const x=pad.l+(nums.length===1?pw/2:pw*i/(nums.length-1));
+    const y=pad.t+ph-(v-min)/range*ph;
+    return [x,y];
+  });
+  const grid=[0,.5,1].map(t=>`<line class="gridline" x1="${pad.l}" y1="${pad.t+ph*t}" x2="${width-pad.r}" y2="${pad.t+ph*t}"/>`).join("");
+  const poly=points.map(p=>p.join(",")).join(" ");
+  const last=points[points.length-1];
+  return `<svg viewBox="0 0 ${width} ${height}" preserveAspectRatio="none">
+    ${grid}<polyline class="spark" points="${poly}"/>
+    ${last?`<circle class="point" cx="${last[0]}" cy="${last[1]}" r="3.2"/>`:""}
+  </svg>`;
+}
+
+function riskSvg(results){
+  const W=1050,H=285,L=48,R=22,T=18,B=40,PW=W-L-R,PH=H-T-B,n=results.length||1;
+  const scores=results.map(r=>Number(r?.risk?.risk_score||0));
+  const pts=[],bars=[],grid=[];
+  for(let s=0;s<=5;s++){const y=T+PH-(s/5)*PH;grid.push(`<line class="gridline" x1="${L}" y1="${y}" x2="${W-R}" y2="${y}"/><text class="axis" x="10" y="${y+4}">${s}</text>`);}
+  results.forEach((r,i)=>{
+    const x=n===1?L+PW/2:L+PW*i/(n-1), score=Math.min(5,scores[i]||0), y=T+PH-score/5*PH;
+    const bw=Math.max(2.4,PW/n-1.3), y0=T+PH;
+    bars.push(`<rect class="bar ${statusClass(r?.risk?.local_status)}" x="${x-bw/2}" y="${y}" width="${bw}" height="${y0-y}" rx="2"/>`);
+    pts.push(`${x},${y}`);
+  });
+  return `<svg viewBox="0 0 ${W} ${H}">${grid.join("")}${bars.join("")}<polyline class="riskline" points="${pts.join(" ")}"/>
+    <text class="axis" x="${L}" y="${H-10}">Window 1</text><text class="axis" x="${W-R-70}" y="${H-10}">Window ${n}</text></svg>`;
+}
+
+function sensorCard(ch){
+  const vals=D.sensor_stream.map(r=>r[ch.key]);
+  const last=vals[vals.length-1], min=Math.min(...vals), max=Math.max(...vals);
+  return `<div class="sensor">
+    <div class="sensor-top">
+      <div><div class="sensor-name">${esc(ch.name)}</div><div class="sensor-unit">${esc(ch.unit)}</div></div>
+      <div><div class="sensor-value">${Number(last).toFixed(ch.key==="heart_rate"||ch.key==="temperature"?2:3)}</div><div class="sensor-meta">latest</div></div>
+    </div>
+    <div class="mini">${lineSvg(vals)}</div>
+    <div class="sensor-meta">min ${min.toFixed(2)} • max ${max.toFixed(2)} • 60 samples</div>
+  </div>`;
+}
+
+function render(){
+  const latest=D.results[D.results.length-1]||{}, ai=latest.ai_prediction||{}, risk=latest.risk||{}, zone=latest.zone||{};
+  const st=String(D.overall_status||"UNKNOWN").toUpperCase(), cls=statusClass(st);
+  const stats=D.window_statistics||{};
+  const firefighter=D.firefighter||{};
+  const markerX=Math.max(10,Math.min(90,Number(latest?.firefighter?.x||10)/100*100));
+  const markerY=Math.max(10,Math.min(90,100-Number(latest?.firefighter?.y||20)/100*100));
+  const map=`<div class="map"><div class="map-label">FIREFIGHTER POSITION</div><div class="map-badge">${esc(firefighter.node_id||"FF01")} • Zone ${esc(zone.zone_id||"A")}</div><div class="marker" style="left:${markerX}%;top:${markerY}%"></div></div>`;
+
+  const recent=D.results.slice(-10).map(r=>{
+    const a=r.ai_prediction||{}, q=r.risk||{};
+    return `<tr><td>${esc(r.window)}</td><td>${esc(r.timestamp)}</td><td>${esc(a.activity)}</td><td>${esc(a.physiological_state)}</td><td>${esc(a.environment)}</td><td>${esc(q.risk_score)}</td><td><span class="pill ${statusClass(q.local_status)}">${esc(q.local_status)}</span></td></tr>`;
+  }).join("");
+
+  document.getElementById("app").innerHTML=`
+    <section class="hero">
+      <article class="card status ${cls}">
+        <div class="label">OVERALL FIREGROUND STATUS</div>
+        <div class="big">${esc(st)}</div>
+        <div class="note">Alert priority: <strong>${esc(latest?.command_center?.alert_priority||"—")}</strong></div>
+      </article>
+      <article class="card gauge">
+        <div class="label">MAX RISK SCORE</div>
+        <div class="ring" style="--p:${Math.min(5,Math.max(0,Math.max(...D.results.map(r=>Number(r?.risk?.risk_score||0)))))/5*100}%"><div class="ring-in"><strong>${Math.max(...D.results.map(r=>Number(r?.risk?.risk_score||0)))}</strong><span>/ 5</span></div></div>
+      </article>
+      <article class="card meta">
+        <div class="label">LATEST AI WINDOW</div>
+        <div class="latest">Window ${esc(latest.window||"—")} • ${esc(latest.timestamp||"—")}</div>
+        <div class="row"><span>Firefighter</span><strong>${esc(firefighter.node_id||"—")}</strong></div>
+        <div class="row"><span>Zone</span><strong>${esc(zone.zone_id||"—")}</strong></div>
+        <div class="row"><span>Risk event</span><strong>${esc(risk.event_type||"—")}</strong></div>
+      </article>
+    </section>
+
+    <section class="stats">
+      <div class="card stat"><strong>${esc(D.sensor_samples)}</strong><span>Sensor Samples</span></div>
+      <div class="card stat"><strong>${esc(D.ai_windows_processed)}</strong><span>AI Windows</span></div>
+      <div class="card stat normal"><strong>${esc(stats.normal||0)}</strong><span>Normal</span></div>
+      <div class="card stat elevated"><strong>${esc(stats.elevated||0)}</strong><span>Elevated</span></div>
+      <div class="card stat high"><strong>${esc(stats.high||0)}</strong><span>High</span></div>
+    </section>
+
+    <section class="card panel">
+      <div class="panel-head"><div><div class="label">MULTITASK VNNX OUTPUT</div><h2>Latest AI Predictions</h2></div><div class="note">Confidence from current inference snapshot</div></div>
+      <div class="pred-grid">
+        <div class="pred"><span class="icon">A</span><div><small>ACTIVITY</small><strong>${esc(ai.activity||"—")}</strong></div><div class="conf">${pct(ai.activity_confidence)}</div></div>
+        <div class="pred"><span class="icon">P</span><div><small>PHYSIOLOGY</small><strong>${esc(ai.physiological_state||"—")}</strong></div><div class="conf">${pct(ai.physiological_confidence)}</div></div>
+        <div class="pred"><span class="icon">E</span><div><small>ENVIRONMENT</small><strong>${esc(ai.environment||"—")}</strong></div><div class="conf">${pct(ai.environment_confidence)}</div></div>
+      </div>
+    </section>
+
+    <section class="card panel">
+      <div class="panel-head"><div><div class="label">SENSOR TELEMETRY</div><h2>9 Sensor Channels</h2></div><div class="note">Current verified 60-sample stream</div></div>
+      <div class="sensor-grid">${D.sensor_channels.map(sensorCard).join("")}</div>
+    </section>
+
+    <section class="card panel">
+      <div class="panel-head"><div><div class="label">RISK PROGRESSION</div><h2>AI Risk Score Across Windows</h2></div>
+      <div class="legend"><span><i class="n"></i>Normal</span><span><i class="e"></i>Elevated</span><span><i class="h"></i>High</span></div></div>
+      <div class="chart">${riskSvg(D.results)}</div>
+    </section>
+
+    <section class="card panel">
+      <div class="panel-head"><div><div class="label">COMMAND-CENTER VIEW</div><h2>Firefighter Location</h2></div><div class="note">Simulated coordinates from latest AI window</div></div>
+      ${map}
+    </section>
+
+    <section class="card panel">
+      <div class="label">RECENT INFERENCE HISTORY</div>
+      <h2>Latest 10 AI Windows</h2>
+      <div class="table-wrap"><table><thead><tr><th>WIN</th><th>TIME</th><th>ACTIVITY</th><th>PHYSIOLOGY</th><th>ENV</th><th>SCORE</th><th>STATUS</th></tr></thead><tbody>${recent}</tbody></table></div>
+    </section>
+
+    <footer>
+      <span><strong>Model:</strong> fireground_v2_V250_ncomp.vnnx</span>
+      <span><strong>Engine:</strong> ${esc(D.inference_engine||"")}</span>
+      <span><strong>Target:</strong> Microchip PolarFire SoC Icicle Kit</span>
+      <span><strong>Mode:</strong> Verified data snapshot</span>
+    </footer>`;
+}
+
+fetch("./data/dashboard_data.json", {cache:"no-store"})
+  .then(r=>{ if(!r.ok) throw new Error("Could not load dashboard data"); return r.json(); })
+  .then(d=>{ D=d; render(); })
+  .catch(err=>{ document.getElementById("app").innerHTML=`<div class="card panel"><h2>Dashboard data could not be loaded</h2><p class="note">${esc(err.message)}</p></div>`; });
+</script>
+</body>
+</html>
