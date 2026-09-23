@@ -81,6 +81,89 @@ th{font-size:9px;color:var(--muted);letter-spacing:.12em}tr:last-child td{border
 .map-badge{position:absolute;right:12px;top:12px;padding:7px 9px;background:#101e34;border:1px solid var(--border);border-radius:9px;font-size:11px;z-index:3}
 footer{display:flex;flex-wrap:wrap;gap:18px;padding:18px 2px 4px;color:var(--muted);font-size:11px}
 footer strong{color:var(--text)}
+
+.water-scenario{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+  margin-top:15px;
+}
+.scenario-card,.hydraulic-card{
+  padding:22px;
+}
+.scenario-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin-top:15px;
+}
+.field label{
+  display:block;
+  color:var(--muted);
+  font-size:9px;
+  letter-spacing:.11em;
+  font-weight:800;
+  margin-bottom:6px;
+}
+.field input,.field select{
+  width:100%;
+  background:#07111f;
+  color:var(--text);
+  border:1px solid var(--border);
+  border-radius:9px;
+  padding:10px;
+  font-size:13px;
+  outline:none;
+}
+.field input:focus,.field select:focus{
+  border-color:var(--cyan);
+}
+.calc-btn{
+  width:100%;
+  margin-top:12px;
+  background:#12304a;
+  border-color:#2d5675;
+}
+.hydraulic-result{
+  margin-top:15px;
+}
+.hydraulic-value{
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  padding:10px 0;
+  border-bottom:1px solid var(--border);
+  font-size:13px;
+}
+.hydraulic-value span{
+  color:var(--muted);
+}
+.hydraulic-value strong{
+  color:var(--text);
+  text-align:right;
+}
+.saved-note{
+  margin-top:10px;
+  font-size:10px;
+  color:var(--muted);
+  line-height:1.5;
+}
+.water-warning{
+  margin-top:14px;
+  padding:10px 12px;
+  border:1px dashed var(--border);
+  border-radius:10px;
+  color:var(--muted);
+  font-size:10px;
+  line-height:1.5;
+}
+@media(max-width:1050px){
+  .water-scenario{grid-template-columns:1fr}
+}
+@media(max-width:740px){
+  .scenario-grid{grid-template-columns:1fr}
+}
+
 @media(max-width:1050px){.hero{grid-template-columns:1fr}.sensor-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:740px){.wrap{padding:16px}.top{flex-direction:column}.stats{grid-template-columns:repeat(2,1fr)}.pred-grid{grid-template-columns:1fr}.sensor-grid{grid-template-columns:1fr}.big{font-size:46px}}
 </style>
@@ -154,11 +237,239 @@ function sensorCard(ch){
   </div>`;
 }
 
+
+const WATER_SETTINGS_KEY = "fireground_water_settings_v2";
+
+const defaultWaterSettings = {
+  hoseDiameter: 65,
+  hoseLength: 30,
+  nozzleType: "Fog",
+  nozzleDiameter: 19,
+  elevation: 12,
+  dischargeCoeff: 0.98,
+  hwC: 140
+};
+
+let currentAiFlowLpm = 450;
+let currentWaterLevel = "MEDIUM";
+let currentDemandIndex = 0;
+
+function getWaterSettings(){
+  try{
+    const saved = JSON.parse(
+      localStorage.getItem(WATER_SETTINGS_KEY) || "{}"
+    );
+
+    return {
+      ...defaultWaterSettings,
+      ...saved
+    };
+  }catch{
+    return {...defaultWaterSettings};
+  }
+}
+
+function setFieldValue(id, value){
+  const el=document.getElementById(id);
+  if(el) el.value=value;
+}
+
+function numberValue(id){
+  const v=Number(document.getElementById(id)?.value);
+  return Number.isFinite(v) ? v : 0;
+}
+
+function restoreWaterSettings(){
+
+  const s=getWaterSettings();
+
+  setFieldValue("hoseDiameter", s.hoseDiameter);
+  setFieldValue("hoseLength", s.hoseLength);
+  setFieldValue("nozzleType", s.nozzleType);
+  setFieldValue("nozzleDiameter", s.nozzleDiameter);
+  setFieldValue("elevation", s.elevation);
+  setFieldValue("dischargeCoeff", s.dischargeCoeff);
+  setFieldValue("hwC", s.hwC);
+
+  updateWaterCalculation();
+}
+
+function saveWaterSettings(){
+
+  const s={
+    hoseDiameter:numberValue("hoseDiameter"),
+    hoseLength:numberValue("hoseLength"),
+    nozzleType:
+      document.getElementById("nozzleType")?.value || "Fog",
+    nozzleDiameter:numberValue("nozzleDiameter"),
+    elevation:numberValue("elevation"),
+    dischargeCoeff:numberValue("dischargeCoeff"),
+    hwC:numberValue("hwC")
+  };
+
+  localStorage.setItem(
+    WATER_SETTINGS_KEY,
+    JSON.stringify(s)
+  );
+}
+
+function updateWaterCalculation(){
+
+  const hoseDiameter = numberValue("hoseDiameter");
+  const hoseLength = numberValue("hoseLength");
+  const nozzleDiameter = numberValue("nozzleDiameter");
+  const elevation = numberValue("elevation");
+  const cd = numberValue("dischargeCoeff");
+  const hwC = numberValue("hwC");
+
+  if(
+    hoseDiameter <= 0 ||
+    hoseLength < 0 ||
+    nozzleDiameter <= 0 ||
+    cd <= 0 ||
+    hwC <= 0 ||
+    currentAiFlowLpm <= 0
+  ){
+    return;
+  }
+
+  const flowLpm = currentAiFlowLpm;
+
+  // ----------------------------------------------------------
+  // NOZZLE PRESSURE
+  //
+  // Q = Cd * A * sqrt(2*DeltaP/rho)
+  //
+  // Rearranged to obtain pressure.
+  // ----------------------------------------------------------
+
+  const rho = 998;
+  const g = 9.80665;
+
+  const Q = flowLpm / 1000 / 60;
+  const dNozzle = nozzleDiameter / 1000;
+  const dHose = hoseDiameter / 1000;
+
+  const area =
+    Math.PI * dNozzle * dNozzle / 4;
+
+  const nozzlePressurePa =
+    0.5 * rho *
+    Math.pow(Q / (cd * area), 2);
+
+  const nozzlePressureBar =
+    nozzlePressurePa / 100000;
+
+  // ----------------------------------------------------------
+  // HAZEN-WILLIAMS HOSE FRICTION
+  //
+  // Result is metres of water head.
+  // ----------------------------------------------------------
+
+  const hf =
+    10.67 *
+    hoseLength *
+    Math.pow(Q, 1.852)
+    /
+    (
+      Math.pow(hwC, 1.852) *
+      Math.pow(dHose, 4.87)
+    );
+
+  const frictionPressureBar =
+    (rho * g * hf) / 100000;
+
+  // ----------------------------------------------------------
+  // ELEVATION LOSS
+  // ----------------------------------------------------------
+
+  const elevationPressureBar =
+    (rho * g * elevation) / 100000;
+
+  // ----------------------------------------------------------
+  // PUMP PRESSURE ESTIMATE
+  // ----------------------------------------------------------
+
+  const pumpPressureBar =
+    nozzlePressureBar +
+    frictionPressureBar +
+    elevationPressureBar;
+
+  saveWaterSettings();
+
+  document.getElementById("waterDemandDisplay").textContent =
+    currentWaterLevel;
+
+  document.getElementById("demandIndexDisplay").textContent =
+    Number(currentDemandIndex).toFixed(1) + " / 100";
+
+  document.getElementById("flowDisplay").textContent =
+    flowLpm.toFixed(0) + " L/min";
+
+  const nozzleType =
+    document.getElementById("nozzleType")?.value || "Fog";
+
+  document.getElementById("nozzleDisplay").textContent =
+    nozzleType +
+    " • " +
+    nozzleDiameter.toFixed(1) +
+    " mm";
+
+  document.getElementById("nozzlePressureDisplay").textContent =
+    nozzlePressureBar.toFixed(2) + " bar";
+
+  document.getElementById("frictionDisplay").textContent =
+    frictionPressureBar.toFixed(2) + " bar";
+
+  document.getElementById("elevationDisplay").textContent =
+    elevationPressureBar.toFixed(2) + " bar";
+
+  document.getElementById("pumpPressureDisplay").textContent =
+    pumpPressureBar.toFixed(2) + " bar";
+}
+
+function calculateHydraulics(){
+  updateWaterCalculation();
+}
+
 function render(){
   const latest=D.results[D.results.length-1]||{}, ai=latest.ai_prediction||{}, risk=latest.risk||{}, zone=latest.zone||{};
   const st=String(D.overall_status||"UNKNOWN").toUpperCase(), cls=statusClass(st);
   const stats=D.window_statistics||{};
+
+  const fg =
+    latest.fireground_summary
+    || D.fireground_summary
+    || {};
+
+  const ffTemps =
+    latest.firefighter_temperatures
+    || D.firefighter_temperatures
+    || {};
+
+  const water =
+    latest.water_demand
+    || D.water_demand
+    || {};
+
   const firefighter=D.firefighter||{};
+
+  currentWaterLevel =
+    String(
+      water.level
+      || "MEDIUM"
+    ).toUpperCase();
+
+  currentDemandIndex =
+    Number(water.demand_index || 0);
+
+  currentAiFlowLpm =
+    Number(water.estimated_flow_requirement_lpm);
+
+  if (!Number.isFinite(currentAiFlowLpm) || currentAiFlowLpm <= 0) {
+    currentAiFlowLpm = 0;
+  }
+
   const markerX=Math.max(10,Math.min(90,Number(latest?.firefighter?.x||10)/100*100));
   const markerY=Math.max(10,Math.min(90,100-Number(latest?.firefighter?.y||20)/100*100));
   const map=`<div class="map"><div class="map-label">FIREFIGHTER POSITION</div><div class="map-badge">${esc(firefighter.node_id||"FF01")} • Zone ${esc(zone.zone_id||"A")}</div><div class="marker" style="left:${markerX}%;top:${markerY}%"></div></div>`;
@@ -186,6 +497,128 @@ function render(){
         <div class="row"><span>Zone</span><strong>${esc(zone.zone_id||"—")}</strong></div>
         <div class="row"><span>Risk event</span><strong>${esc(risk.event_type||"—")}</strong></div>
       </article>
+    </section>
+
+
+    <section class="water-scenario">
+
+      <article class="card scenario-card">
+        <div class="label">⚙ FIRE SUPPRESSION SCENARIO</div>
+        <h2>Current Hose / Nozzle Setup</h2>
+
+        <div class="scenario-grid">
+
+          <div class="field">
+            <label>HOSE DIAMETER (mm)</label>
+            <input id="hoseDiameter" type="number" min="1" step="0.1">
+          </div>
+
+          <div class="field">
+            <label>HOSE LENGTH (m)</label>
+            <input id="hoseLength" type="number" min="0" step="1">
+          </div>
+
+          <div class="field">
+            <label>NOZZLE TYPE</label>
+            <select id="nozzleType">
+              <option value="Fog">Fog</option>
+              <option value="Smooth Bore">Smooth Bore</option>
+              <option value="Custom">Custom</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label>NOZZLE DIAMETER (mm)</label>
+            <input id="nozzleDiameter" type="number" min="1" step="0.1">
+          </div>
+
+          <div class="field">
+            <label>ELEVATION DIFFERENCE (m)</label>
+            <input id="elevation" type="number" step="0.1">
+          </div>
+
+          <div class="field">
+            <label>DISCHARGE COEFFICIENT (Cd)</label>
+            <input id="dischargeCoeff" type="number" min="0.1" max="1.2" step="0.01">
+          </div>
+
+          <div class="field">
+            <label>HAZEN-WILLIAMS C</label>
+            <input id="hwC" type="number" min="50" max="200" step="1">
+          </div>
+
+        </div>
+
+        <button class="calc-btn" onclick="calculateHydraulics()">
+          CALCULATE WATER DETAILS
+        </button>
+
+        <div class="saved-note">
+          ✓ Your last scenario values are saved automatically in this browser
+          and restored when the dashboard is reopened.
+        </div>
+      </article>
+
+      <article class="card hydraulic-card">
+        <div class="label">💧 WATER DETAILS</div>
+        <h2>AI Demand + Hydraulic Result</h2>
+
+        <div class="hydraulic-result">
+
+          <div class="hydraulic-value">
+            <span>AI Water Demand</span>
+            <strong id="waterDemandDisplay">—</strong>
+          </div>
+
+          <div class="hydraulic-value">
+            <span>Demand Index</span>
+            <strong id="demandIndexDisplay">—</strong>
+          </div>
+
+          <div class="hydraulic-value">
+            <span>AI Estimated Flow</span>
+            <strong id="flowDisplay">—</strong>
+          </div>
+
+          <div class="hydraulic-value">
+            <span>Nozzle Type</span>
+            <strong id="nozzleDisplay">—</strong>
+          </div>
+
+          <div class="hydraulic-value">
+            <span>Nozzle Pressure</span>
+            <strong id="nozzlePressureDisplay">—</strong>
+          </div>
+
+          <div class="hydraulic-value">
+            <span>Hose Friction Loss</span>
+            <strong id="frictionDisplay">—</strong>
+          </div>
+
+          <div class="hydraulic-value">
+            <span>Elevation Loss</span>
+            <strong id="elevationDisplay">—</strong>
+          </div>
+
+          <div class="hydraulic-value">
+            <span>Estimated Pump Pressure</span>
+            <strong id="pumpPressureDisplay">—</strong>
+          </div>
+
+        </div>
+
+        <div class="water-warning">
+          ⚠ Prototype/research calculation. AI water demand (flow, volume,
+          duration) is a lookup-table estimate anchored to case-level FSRI
+          live-fire suppression records, not a physics-based or validated
+          prediction for this specific sensor reading. Hydraulic pressure is
+          calculated from the entered scenario parameters. Real field
+          deployment requires validated equipment data, manufacturer
+          specifications, flow testing, and qualified fire-service/hydraulic
+          verification.
+        </div>
+      </article>
+
     </section>
 
     <section class="stats">
@@ -235,15 +668,138 @@ function render(){
     </footer>`;
 }
 
+
+function captureWaterForm(){
+  const ids = [
+    "hoseDiameter",
+    "hoseLength",
+    "nozzleType",
+    "nozzleDiameter",
+    "elevation",
+    "dischargeCoeff",
+    "hwC"
+  ];
+
+  const state = {};
+  let found = false;
+
+  for(const id of ids){
+    const el = document.getElementById(id);
+
+    if(el){
+      state[id] = el.value;
+      found = true;
+    }
+  }
+
+  return found ? state : null;
+}
+
+function restoreWaterForm(state){
+  if(!state){
+    restoreWaterSettings();
+    return;
+  }
+
+  for(const [id,value] of Object.entries(state)){
+    setFieldValue(id, value);
+  }
+
+  updateWaterCalculation();
+}
+
+function attachWaterInputListeners(){
+  const ids = [
+    "hoseDiameter",
+    "hoseLength",
+    "nozzleType",
+    "nozzleDiameter",
+    "elevation",
+    "dischargeCoeff",
+    "hwC"
+  ];
+
+  for(const id of ids){
+    const el = document.getElementById(id);
+
+    if(el && !el.dataset.listenerAttached){
+      el.addEventListener("change", saveWaterSettings);
+      el.dataset.listenerAttached = "1";
+    }
+  }
+}
+
 async function loadLive(){
+  const waterFormState = captureWaterForm();
+
   try{
-    const r=await fetch("/api/latest?ts="+Date.now(), {cache:"no-store"});
-    if(r.status===404){ throw new Error("Waiting for the first VNNX result update…"); }
-    if(!r.ok){ throw new Error("Live result API returned HTTP "+r.status); }
-    D=await r.json();
-    render();
+    let r;
+
+    if(
+      location.hostname !== "localhost" &&
+      location.hostname !== "127.0.0.1"
+    ){
+      r = await fetch(
+        "/api/latest?ts=" + Date.now(),
+        {cache:"no-store"}
+      );
+    }
+
+    if(!r || !r.ok){
+      r = await fetch(
+        "/results/live_vnnx_fireground_result.json?ts=" + Date.now(),
+        {cache:"no-store"}
+      );
+    }
+
+    if(!r.ok){
+      throw new Error(
+        "Live VNNX result file is not available yet."
+      );
+    }
+
+    D = await r.json();
+
+    // Do NOT rebuild the dashboard while the user is typing
+    // in a water-scenario field. Rebuilding the DOM here would
+    // interrupt multi-digit input such as 65 or 120.
+    const active = document.activeElement;
+
+    const waterInputIds = [
+      "hoseDiameter",
+      "hoseLength",
+      "nozzleType",
+      "nozzleDiameter",
+      "elevation",
+      "dischargeCoeff",
+      "hwC"
+    ];
+
+    const editingWaterField =
+      active && waterInputIds.includes(active.id);
+
+    if(!editingWaterField){
+
+      // Rebuild live dashboard only when the user is not typing.
+      render();
+
+      // Restore whatever values the user previously entered.
+      restoreWaterForm(waterFormState);
+
+      // Make changes persist for the next visit.
+      attachWaterInputListeners();
+    }
+
   }catch(err){
-    document.getElementById("app").innerHTML=`<div class="card panel"><h2>Waiting for live VNNX data</h2><p class="note">${esc(err.message)}</p><p class="note">The local publisher must send a result to <code>/api/update</code>.</p></div>`;
+
+    document.getElementById("app").innerHTML =
+      `<div class="card panel">
+        <h2>Waiting for live VNNX data</h2>
+        <p class="note">${esc(err.message)}</p>
+        <p class="note">
+          Run the Fireground AI VNNX live pipeline first.
+        </p>
+      </div>`;
   }
 }
 loadLive();
