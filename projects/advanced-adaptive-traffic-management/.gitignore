@@ -1,0 +1,14 @@
+# Local simulation/synthesis products
+build/
+*.vcd
+*.vvp
+*.fst
+*.lxt
+*.lxt2
+*.wlf
+*.fsdb
+*.log
+traffic_management_sim
+controller_tb
+axi_tb
+soc_elab
