@@ -96,12 +96,17 @@ python3 src/live_vnnx_fireground_system.py
 
 ## Additional ECE / VLSI Project
 
-### Advanced Adaptive Traffic Management Controller
-An educational SystemVerilog RTL project featuring demand-adaptive green timing, emergency and pedestrian request capture, startup all-red sequencing, fault-latched outputs, simulation monitors, and assertion-based checks.
+### Advanced Adaptive Traffic Management SoC
+An educational SystemVerilog traffic-control subsystem with adaptive timing, AXI4-Lite memory-mapped registers, a processor-facing top-level wrapper, C firmware helpers, register-map documentation, testbenches, and a GitHub Actions smoke-test workflow.
 
 - [Project documentation](projects/advanced-adaptive-traffic-management/README.md)
 - [Controller RTL](projects/advanced-adaptive-traffic-management/rtl/advanced_traffic_management_controller.sv)
-- [Verification testbench](projects/advanced-adaptive-traffic-management/verification/tb_advanced_traffic_management_controller.sv)
-- [SystemVerilog assertions](projects/advanced-adaptive-traffic-management/verification/advanced_traffic_management_sva.sv)
+- [AXI4-Lite register bank](projects/advanced-adaptive-traffic-management/rtl/axi4lite_traffic_registers.sv)
+- [SoC top-level wrapper](projects/advanced-adaptive-traffic-management/rtl/traffic_management_soc_top.sv)
+- [Controller testbench](projects/advanced-adaptive-traffic-management/verification/tb_advanced_traffic_management_controller.sv)
+- [AXI smoke testbench](projects/advanced-adaptive-traffic-management/verification/tb_traffic_management_axi.sv)
+- [Embedded C register helpers](projects/advanced-adaptive-traffic-management/software/include/traffic_regs.h)
+- [Architecture and integration guide](projects/advanced-adaptive-traffic-management/docs/system_architecture.md)
+- [Automated smoke-test runner](projects/advanced-adaptive-traffic-management/scripts/run_smoke_tests.sh)
 
-This is an educational RTL prototype. Simulation, formal verification, synthesis, timing analysis, and FPGA validation are not claimed until run and documented.
+This is an educational prototype. The repository does not yet include a RISC-V CPU core or FPGA bitstream, and the test suite has not been independently run by the assistant. Review actual CI results before claiming passing verification. Do not connect this design to public-road signals.
