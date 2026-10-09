@@ -36,6 +36,8 @@ The repository provides the processor-facing peripheral and example firmware, bu
 13. Sensor front-end module with synchronizers, button debouncing, saturating demand scores, and slow decay.
 14. Separate watchdog module for heartbeat timeout and invalid-sensor diagnostics.
 15. Dedicated unit-test benches for the sensor front end and watchdog.
+16. Python digital twin to compare a fixed-time baseline against a queue-aware adaptive policy.
+17. Unit tests for deterministic digital-twin behavior and accounting sanity.
 
 ## Source layout
 
@@ -52,6 +54,8 @@ The repository provides the processor-facing peripheral and example firmware, bu
 - `verification/advanced_traffic_management_sva.sv` — assertion checker for an SVA-capable simulator.
 - `software/include/traffic_regs.h` — C register definitions and helper functions.
 - `software/examples/traffic_demo.c` — illustrative firmware skeleton.
+- `software/sim/traffic_digital_twin.py` — configurable queueing simulation and JSON report generator.
+- `software/sim/test_traffic_digital_twin.py` — unit tests for the simulation.
 - `docs/register_map.json` — machine-readable register map.
 - `docs/system_architecture.md` — architecture, integration steps, and limitations.
 - `docs/verification_matrix.md` — evidence matrix and release readiness gates.
@@ -96,6 +100,17 @@ iverilog -g2012 -s traffic_management_soc_top -o soc_elab projects/advanced-adap
 ```
 
 The CI workflow is configured to run the register-map consistency check and attempt the smoke-test script on relevant pushes and pull requests. A committed workflow file is not proof that a run passed; inspect the Actions result for the actual outcome.
+
+## Digital twin experiment
+
+Run the queueing model from the repository root:
+
+```bash
+python3 projects/advanced-adaptive-traffic-management/software/sim/traffic_digital_twin.py --steps 2000 --seed 2026 --arrival-ns 0.65 --arrival-ew 0.25 --output traffic_digital_twin_report.json
+python3 -m unittest discover -s projects/advanced-adaptive-traffic-management/software/sim -p "test_*.py"
+```
+
+The model compares a fixed-time baseline with a queue-aware adaptive policy under the same seeded arrivals and emits a JSON report with arrivals, vehicles served, residual queue, an approximate queue-delay metric, maximum queue, and signal-switch count. This is a **toy queueing model**, not a calibrated traffic simulator; benchmark results are not evidence of real-world improvements. It is software-only and does not yet exchange live signals with the RTL.
 
 ## Optional generic synthesis check
 
