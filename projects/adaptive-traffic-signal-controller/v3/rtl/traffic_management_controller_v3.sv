@@ -198,7 +198,7 @@ module traffic_management_controller_v3 #(
         emergency_active = ns_em_pending | ew_em_pending | ns_em_sync | ew_em_sync;
         fault_active = (state == ST_FAULT);
         debug_state = state;
-        debug_timer = (timer > 255) ? 8'hFF : timer[7:0];
+        debug_timer = timer; // zero-extend or truncate to the 8-bit debug port
 
         case (state)
             ST_NS_GREEN:  begin ns_light = GREEN; ew_light = RED; end
