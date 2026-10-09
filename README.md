@@ -107,6 +107,6 @@ An educational SystemVerilog traffic-control subsystem with adaptive timing, AXI
 - [AXI smoke testbench](projects/advanced-adaptive-traffic-management/verification/tb_traffic_management_axi.sv)
 - [Embedded C register helpers](projects/advanced-adaptive-traffic-management/software/include/traffic_regs.h)
 - [Architecture and integration guide](projects/advanced-adaptive-traffic-management/docs/system_architecture.md)
-- [Automated smoke-test runner](projects/advanced-adaptive-traffic-management/scripts/run_smoke_tests.sh)
+- [Automated smoke-test runner](projects/advanced-adaptive-traffic-management/scripts/run_smoke_tests.sh)\n- [Register-map consistency checker](projects/advanced-adaptive-traffic-management/scripts/check_register_map.py)\n- [Verification matrix](projects/advanced-adaptive-traffic-management/docs/verification_matrix.md)
 
 This is an educational prototype. The repository does not yet include a RISC-V CPU core or FPGA bitstream, and the test suite has not been independently run by the assistant. Review actual CI results before claiming passing verification. Do not connect this design to public-road signals.
