@@ -26,7 +26,7 @@ for item in data.get("registers", []):
         fail(f"unexpected register name: {name}")
     rtl_name = f"REG_{name}"
     rtl_match = re.search(
-        rf"localparam\s+logic\s*\[[^]]+\]\s+{rtl_name}\s*=\s*'h([0-9A-Fa-f]+)",
+        rf"localparam\s+logic\s*\[[^\]]+\]\s+{rtl_name}\s*=\s*'h([0-9A-Fa-f]+)",
         rtl,
     )
     if not rtl_match:
