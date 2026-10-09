@@ -34,3 +34,14 @@ These files were committed to GitHub, but no HDL simulation, SVA/formal verifica
 - Added a local browser dashboard for loading and comparing JSON simulation reports.
 
 Validation remains pending: the assistant has not executed HDL simulation, Python tests, synthesis, place-and-route, or physical hardware tests. CI results must be checked before claiming a pass.
+
+
+### Integrated physical demonstration and benchmark matrix
+- Added a separate sensor-driven top that connects vehicle sensing, button conditioning, watchdog diagnostics, and the traffic controller.
+- Added an integrated-top testbench for invalid-sensor fault behavior and all-red vehicle outputs.
+- Expanded the smoke-test runner to compile and invoke five HDL testbenches.
+- Added multi-scenario, multi-seed software benchmark generation and unit tests.
+- Configured CI to produce and upload JSON benchmark reports when the workflow succeeds.
+- Added integration, benchmark protocol, and next-stage engineering documentation.
+
+No local HDL simulator was available in the execution environment, so the newly added HDL tests have not been run here. Check the GitHub Actions run for actual results.
