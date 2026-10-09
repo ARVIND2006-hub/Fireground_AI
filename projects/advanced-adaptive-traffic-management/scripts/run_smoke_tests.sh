@@ -37,4 +37,24 @@ iverilog -g2012 -s tb_traffic_management_axi \
   vvp ./axi_tb
 )
 
-echo "Smoke-test commands completed. Review both logs and waveforms; this script does not perform formal verification or synthesis."
+echo "[3/4] Compile and run sensor frontend testbench"
+iverilog -g2012 -s tb_traffic_sensor_frontend \
+  -o "$BUILD_DIR/sensor_tb" \
+  "$RTL_DIR/traffic_sensor_frontend.sv" \
+  "$VERIFY_DIR/tb_traffic_sensor_frontend.sv"
+(
+  cd "$BUILD_DIR"
+  vvp ./sensor_tb
+)
+
+echo "[4/4] Compile and run watchdog testbench"
+iverilog -g2012 -s tb_traffic_watchdog \
+  -o "$BUILD_DIR/watchdog_tb" \
+  "$RTL_DIR/traffic_watchdog.sv" \
+  "$VERIFY_DIR/tb_traffic_watchdog.sv"
+(
+  cd "$BUILD_DIR"
+  vvp ./watchdog_tb
+)
+
+echo "Smoke-test commands completed. Review all logs and waveforms; this script does not perform formal verification or FPGA synthesis."
