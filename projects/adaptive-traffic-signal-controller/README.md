@@ -2,7 +2,17 @@
 
 An educational RTL project exploring demand-adaptive traffic lights, emergency priority, pedestrian crossing requests, asynchronous input synchronization, and fail-safe handling.
 
-## Recommended version: Advanced
+## Recommended version: V3 — Hardened RTL + Verification
+The most advanced implementation is in the `v3/` folder. It adds a startup all-red phase, bounded-width timer, edge-captured emergency and pedestrian request queues, explicit simultaneous-emergency tie-breaking, debug outputs, simulation monitors, and a separate SVA checker.
+
+**Start here:** [V3 documentation](v3/README.md)
+
+### V3 source files
+- [V3 RTL controller](v3/rtl/traffic_management_controller_v3.sv)
+- [V3 testbench](v3/verification/tb_traffic_management_controller_v3.sv)
+- [V3 SVA checker](v3/verification/traffic_management_v3_sva.sv)
+
+## Earlier version: Advanced
 The expanded version is in the `advanced/` folder and adds:
 - Green timing adjusted by encoded vehicle demand.
 - Emergency requests with safe yellow/all-red transitions.
