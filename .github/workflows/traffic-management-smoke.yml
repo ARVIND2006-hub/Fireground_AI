@@ -21,5 +21,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y iverilog
+      - name: Check register-map consistency
+        run: python3 projects/advanced-adaptive-traffic-management/scripts/check_register_map.py
       - name: Run controller and AXI smoke tests
         run: bash projects/advanced-adaptive-traffic-management/scripts/run_smoke_tests.sh
