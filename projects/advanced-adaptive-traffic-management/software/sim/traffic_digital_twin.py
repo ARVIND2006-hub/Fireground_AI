@@ -39,7 +39,7 @@ def simulate(policy: str, steps: int, seed: int,
     switches = 0
     active = 0
     green_age = 0
-    clearance = 0
+    clearance = 3
     clearance_remaining = 0
 
     for _ in range(steps):
