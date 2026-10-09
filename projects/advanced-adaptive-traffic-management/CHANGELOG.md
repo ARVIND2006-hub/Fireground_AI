@@ -31,5 +31,6 @@ These files were committed to GitHub, but no HDL simulation, SVA/formal verifica
 - Added a seeded Python queueing digital twin comparing fixed and adaptive signal policies, with unit tests and JSON metrics output.
 - Added CI steps for Python tests and a sample digital-twin run.
 - Added FPGA constraint template, bring-up checklist, and performance-metric definitions.
+- Added a local browser dashboard for loading and comparing JSON simulation reports.
 
 Validation remains pending: the assistant has not executed HDL simulation, Python tests, synthesis, place-and-route, or physical hardware tests. CI results must be checked before claiming a pass.
