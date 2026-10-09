@@ -1,0 +1,25 @@
+name: Traffic Management RTL Smoke Tests
+
+on:
+  push:
+    paths:
+      - "projects/advanced-adaptive-traffic-management/**"
+      - ".github/workflows/traffic-management-smoke.yml"
+  pull_request:
+    paths:
+      - "projects/advanced-adaptive-traffic-management/**"
+      - ".github/workflows/traffic-management-smoke.yml"
+  workflow_dispatch:
+
+jobs:
+  iverilog-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install Icarus Verilog
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y iverilog
+      - name: Run controller and AXI smoke tests
+        run: bash projects/advanced-adaptive-traffic-management/scripts/run_smoke_tests.sh
