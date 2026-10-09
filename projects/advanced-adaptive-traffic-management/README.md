@@ -39,6 +39,7 @@ The repository provides the processor-facing peripheral and example firmware, bu
 - `rtl/advanced_traffic_management_controller.sv` — controller FSM.
 - `rtl/axi4lite_traffic_registers.sv` — memory-mapped peripheral registers.
 - `rtl/traffic_management_soc_top.sv` — integrated top-level wrapper.
+- `CHANGELOG.md` — summary of repository enhancements and validation status.
 - `verification/tb_advanced_traffic_management_controller.sv` — controller testbench.
 - `verification/tb_traffic_management_axi.sv` — basic AXI and top-level smoke test.
 - `verification/advanced_traffic_management_sva.sv` — assertion checker for an SVA-capable simulator.
