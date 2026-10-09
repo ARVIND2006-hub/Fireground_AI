@@ -149,7 +149,7 @@ module axi4lite_traffic_registers #(
                         ns_emergency_request, sensor_data_valid};
                     REG_DEMAND: s_axi_rdata <= {{(DATA_WIDTH-8){1'b0}},
                         ew_demand, ns_demand};
-                    REG_STATUS: s_axi_rdata <= {{(DATA_WIDTH-10){1'b0}},
+                    REG_STATUS: s_axi_rdata <= {{(DATA_WIDTH-8){1'b0}},
                         fault_active, emergency_active, ped_walk_ew, ped_walk_ns,
                         ew_light, ns_light};
                     REG_DEBUG: s_axi_rdata <= {{(DATA_WIDTH-12){1'b0}},
