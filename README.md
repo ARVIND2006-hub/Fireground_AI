@@ -113,6 +113,7 @@ An educational SystemVerilog traffic-control subsystem with adaptive timing, AXI
 - [Sensor front-end RTL](projects/advanced-adaptive-traffic-management/rtl/traffic_sensor_frontend.sv)
 - [Watchdog RTL](projects/advanced-adaptive-traffic-management/rtl/traffic_watchdog.sv)
 - [Digital twin simulator](projects/advanced-adaptive-traffic-management/software/sim/traffic_digital_twin.py)
+- [Browser dashboard](projects/advanced-adaptive-traffic-management/software/dashboard/index.html)
 - [Digital twin unit tests](projects/advanced-adaptive-traffic-management/software/sim/test_traffic_digital_twin.py)
 - [FPGA bring-up checklist](projects/advanced-adaptive-traffic-management/docs/fpga_bringup_checklist.md)
 - [Digital-twin metric definitions](projects/advanced-adaptive-traffic-management/docs/performance_metrics.md)
