@@ -33,15 +33,22 @@ The repository provides the processor-facing peripheral and example firmware, bu
 10. C header and firmware example for a future soft processor.
 11. JSON register-map description.
 12. GitHub Actions workflow to attempt smoke tests on pushes and pull requests.
+13. Sensor front-end module with synchronizers, button debouncing, saturating demand scores, and slow decay.
+14. Separate watchdog module for heartbeat timeout and invalid-sensor diagnostics.
+15. Dedicated unit-test benches for the sensor front end and watchdog.
 
 ## Source layout
 
 - `rtl/advanced_traffic_management_controller.sv` — controller FSM.
 - `rtl/axi4lite_traffic_registers.sv` — memory-mapped peripheral registers.
 - `rtl/traffic_management_soc_top.sv` — integrated top-level wrapper.
+- `rtl/traffic_sensor_frontend.sv` — standalone button-conditioning and demand-estimation module.
+- `rtl/traffic_watchdog.sv` — standalone heartbeat/sensor-health watchdog.
 - `CHANGELOG.md` — summary of repository enhancements and validation status.
 - `verification/tb_advanced_traffic_management_controller.sv` — controller testbench.
 - `verification/tb_traffic_management_axi.sv` — basic AXI and top-level smoke test.
+- `verification/tb_traffic_sensor_frontend.sv` — sensor debounce and demand smoke test.
+- `verification/tb_traffic_watchdog.sv` — heartbeat timeout smoke test.
 - `verification/advanced_traffic_management_sva.sv` — assertion checker for an SVA-capable simulator.
 - `software/include/traffic_regs.h` — C register definitions and helper functions.
 - `software/examples/traffic_demo.c` — illustrative firmware skeleton.
