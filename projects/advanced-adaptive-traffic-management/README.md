@@ -59,6 +59,9 @@ The repository provides the processor-facing peripheral and example firmware, bu
 - `docs/register_map.json` — machine-readable register map.
 - `docs/system_architecture.md` — architecture, integration steps, and limitations.
 - `docs/verification_matrix.md` — evidence matrix and release readiness gates.
+- `docs/fpga_bringup_checklist.md` — board bring-up checklist and evidence requirements.
+- `docs/performance_metrics.md` — definitions and limitations of digital-twin metrics.
+- `constraints/traffic_management_template.xdc` — placeholder-only FPGA timing constraint template.
 - `scripts/run_smoke_tests.sh` — local Icarus Verilog smoke-test runner.
 - `scripts/check_register_map.py` — dependency-free JSON/RTL/C register-offset consistency check.
 - `scripts/synth_yosys.ys` — optional Yosys generic synthesis/structural-check script.
@@ -110,7 +113,7 @@ python3 projects/advanced-adaptive-traffic-management/software/sim/traffic_digit
 python3 -m unittest discover -s projects/advanced-adaptive-traffic-management/software/sim -p "test_*.py"
 ```
 
-The model compares a fixed-time baseline with a queue-aware adaptive policy under the same seeded arrivals and emits a JSON report with arrivals, vehicles served, residual queue, an approximate queue-delay metric, maximum queue, and signal-switch count. This is a **toy queueing model**, not a calibrated traffic simulator; benchmark results are not evidence of real-world improvements. It is software-only and does not yet exchange live signals with the RTL.
+The model compares a fixed-time baseline with a queue-aware adaptive policy under the same seeded arrivals and emits a JSON report with arrivals, vehicles served, residual queue, an approximate queue-delay metric, maximum queue, and signal-switch count. This is a **toy queueing model**, not a calibrated traffic simulator; benchmark results are not evidence of real-world improvements. Metric definitions and experiment guidance are in `docs/performance_metrics.md`. It is software-only and does not yet exchange live signals with the RTL.
 
 ## Optional generic synthesis check
 
@@ -122,7 +125,7 @@ yosys -s projects/advanced-adaptive-traffic-management/scripts/synth_yosys.ys
 
 This script performs hierarchy, process lowering, optimization, structural checks, and statistics, then writes a generic netlist under `build/traffic-management/`. It is **not** FPGA-specific synthesis, place-and-route, timing closure, or proof of correct behavior. Review all warnings and the generated report.
 
-## Firmware example
+## FPGA constraints template\n\n`constraints/traffic_management_template.xdc` is a placeholder only. Pin assignments, I/O standards, clock period, and external delays must be filled using the exact board documentation before FPGA implementation. It is not a ready-to-run board constraint file.\n\n## Firmware example
 
 The C example uses a placeholder peripheral base address. Replace it with the actual address from the target platform's memory map before running it on a processor. The repository does not currently provide a complete RISC-V CPU subsystem, linker script, board support package, or FPGA bitstream.
 
