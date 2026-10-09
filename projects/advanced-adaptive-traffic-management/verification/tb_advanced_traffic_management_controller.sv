@@ -37,7 +37,7 @@ module tb_advanced_traffic_management_controller;
 
     initial begin
         $dumpfile("advanced_traffic_management.vcd");
-        $dumpvars(0,tb_traffic_management_controller_v3);
+        $dumpvars(0,tb_advanced_traffic_management_controller);
 
         // Hold reset, then exercise startup all-red and normal operation.
         repeat (3) @(negedge clk);
