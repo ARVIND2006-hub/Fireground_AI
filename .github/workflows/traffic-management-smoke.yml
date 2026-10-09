@@ -26,6 +26,6 @@ jobs:
       - name: Run digital-twin unit tests
         run: python3 -m unittest discover -s projects/advanced-adaptive-traffic-management/software/sim -p "test_*.py"
       - name: Generate digital-twin example report
-        run: python3 projects/advanced-adaptive-traffic-management/software/sim/traffic_digital_twin.py --output build/traffic_digital_twin_report.json
+        run: mkdir -p build && python3 projects/advanced-adaptive-traffic-management/software/sim/traffic_digital_twin.py --output build/traffic_digital_twin_report.json
       - name: Run controller and AXI smoke tests
         run: bash projects/advanced-adaptive-traffic-management/scripts/run_smoke_tests.sh
