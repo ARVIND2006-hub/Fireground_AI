@@ -114,5 +114,8 @@ An educational SystemVerilog traffic-control subsystem with adaptive timing, AXI
 - [Watchdog RTL](projects/advanced-adaptive-traffic-management/rtl/traffic_watchdog.sv)
 - [Digital twin simulator](projects/advanced-adaptive-traffic-management/software/sim/traffic_digital_twin.py)
 - [Digital twin unit tests](projects/advanced-adaptive-traffic-management/software/sim/test_traffic_digital_twin.py)
+- [FPGA bring-up checklist](projects/advanced-adaptive-traffic-management/docs/fpga_bringup_checklist.md)
+- [Digital-twin metric definitions](projects/advanced-adaptive-traffic-management/docs/performance_metrics.md)
+- [FPGA constraint template](projects/advanced-adaptive-traffic-management/constraints/traffic_management_template.xdc)
 
 This is an educational prototype. The repository does not yet include a RISC-V CPU core or FPGA bitstream, and the test suite has not been independently run by the assistant. Review actual CI results before claiming passing verification. Do not connect this design to public-road signals.
