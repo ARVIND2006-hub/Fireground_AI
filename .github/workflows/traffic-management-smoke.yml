@@ -27,5 +27,12 @@ jobs:
         run: python3 -m unittest discover -s projects/advanced-adaptive-traffic-management/software/sim -p "test_*.py"
       - name: Generate digital-twin example report
         run: mkdir -p build && python3 projects/advanced-adaptive-traffic-management/software/sim/traffic_digital_twin.py --output build/traffic_digital_twin_report.json
+      - name: Generate multi-scenario benchmark matrix
+        run: python3 projects/advanced-adaptive-traffic-management/software/sim/benchmark_scenarios.py --steps 500 --seeds 11 22 33 --output build/traffic_benchmark_matrix.json
+      - name: Upload benchmark reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: traffic-simulation-reports
+          path: build/*.json
       - name: Run controller and AXI smoke tests
         run: bash projects/advanced-adaptive-traffic-management/scripts/run_smoke_tests.sh
