@@ -45,8 +45,10 @@ The repository provides the processor-facing peripheral and example firmware, bu
 - `software/include/traffic_regs.h` — C register definitions and helper functions.
 - `software/examples/traffic_demo.c` — illustrative firmware skeleton.
 - `docs/register_map.json` — machine-readable register map.
-- `docs/system_architecture.md` — architecture, integration steps, and limitations.\n- `docs/verification_matrix.md` — evidence matrix and release readiness gates.
-- `scripts/run_smoke_tests.sh` — local Icarus Verilog smoke-test runner.\n- `scripts/check_register_map.py` — dependency-free JSON/RTL/C register-offset consistency check.
+- `docs/system_architecture.md` — architecture, integration steps, and limitations.
+- `docs/verification_matrix.md` — evidence matrix and release readiness gates.
+- `scripts/run_smoke_tests.sh` — local Icarus Verilog smoke-test runner.
+- `scripts/check_register_map.py` — dependency-free JSON/RTL/C register-offset consistency check.
 - `.github/workflows/traffic-management-smoke.yml` — CI smoke-test workflow.
 
 ## AXI4-Lite register map
