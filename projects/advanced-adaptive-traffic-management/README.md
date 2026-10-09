@@ -39,6 +39,9 @@ The repository provides the processor-facing peripheral and example firmware, bu
 16. Python digital twin to compare a fixed-time baseline against a queue-aware adaptive policy.
 17. Unit tests for deterministic digital-twin behavior and accounting sanity.
 18. Browser-based dashboard to visualize JSON simulation reports without a server.
+19. Separate sensor-driven physical demonstration top connecting the sensor front end, watchdog, and controller.
+20. Integrated-top smoke test for invalid-sensor fault and all-red outputs.
+21. Multi-scenario benchmark matrix across balanced, peak-direction, and near-saturation demand.
 
 ## Source layout
 
@@ -47,22 +50,29 @@ The repository provides the processor-facing peripheral and example firmware, bu
 - `rtl/traffic_management_soc_top.sv` — integrated top-level wrapper.
 - `rtl/traffic_sensor_frontend.sv` — standalone button-conditioning and demand-estimation module.
 - `rtl/traffic_watchdog.sv` — standalone heartbeat/sensor-health watchdog.
+- `rtl/traffic_management_physical_top.sv` — integrated sensor-driven tabletop demonstration top.
 - `CHANGELOG.md` — summary of repository enhancements and validation status.
 - `verification/tb_advanced_traffic_management_controller.sv` — controller testbench.
 - `verification/tb_traffic_management_axi.sv` — basic AXI and top-level smoke test.
 - `verification/tb_traffic_sensor_frontend.sv` — sensor debounce and demand smoke test.
 - `verification/tb_traffic_watchdog.sv` — heartbeat timeout smoke test.
+- `verification/tb_traffic_management_physical_top.sv` — integrated fault-path smoke test.
 - `verification/advanced_traffic_management_sva.sv` — assertion checker for an SVA-capable simulator.
 - `software/include/traffic_regs.h` — C register definitions and helper functions.
 - `software/examples/traffic_demo.c` — illustrative firmware skeleton.
 - `software/sim/traffic_digital_twin.py` — configurable queueing simulation and JSON report generator.
 - `software/sim/test_traffic_digital_twin.py` — unit tests for the simulation.
+- `software/sim/benchmark_scenarios.py` — multi-seed, multi-demand-policy comparison.
+- `software/sim/test_benchmark_scenarios.py` — tests for benchmark coverage and reproducibility.
+- `software/sim/../dashboard/index.html` — browser dashboard for generated reports.
 - `software/dashboard/index.html` — local browser dashboard for JSON report visualization.
 - `docs/register_map.json` — machine-readable register map.
 - `docs/system_architecture.md` — architecture, integration steps, and limitations.
 - `docs/verification_matrix.md` — evidence matrix and release readiness gates.
 - `docs/fpga_bringup_checklist.md` — board bring-up checklist and evidence requirements.
 - `docs/performance_metrics.md` — definitions and limitations of digital-twin metrics.
+- `docs/integration_architecture.md` — sensor-to-watchdog-to-controller signal path.
+- `docs/benchmark_protocol.md` — reproducible experiment instructions.
 - `constraints/traffic_management_template.xdc` — placeholder-only FPGA timing constraint template.
 - `scripts/run_smoke_tests.sh` — local Icarus Verilog smoke-test runner.
 - `scripts/check_register_map.py` — dependency-free JSON/RTL/C register-offset consistency check.
@@ -117,7 +127,7 @@ python3 -m unittest discover -s projects/advanced-adaptive-traffic-management/so
 
 The model compares a fixed-time baseline with a queue-aware adaptive policy under the same seeded arrivals and emits a JSON report with arrivals, vehicles served, residual queue, an approximate queue-delay metric, maximum queue, and signal-switch count. This is a **toy queueing model**, not a calibrated traffic simulator; benchmark results are not evidence of real-world improvements. Metric definitions and experiment guidance are in `docs/performance_metrics.md`. Open `software/dashboard/index.html` in a browser and load the generated JSON file to visualize a run. The dashboard's built-in sample uses explicitly marked placeholder values, not measured results. It is software-only and does not yet exchange live signals with the RTL.
 
-## Optional generic synthesis check
+Run a multi-scenario benchmark matrix from the repository root:\n\n```bash\npython3 projects/advanced-adaptive-traffic-management/software/sim/benchmark_scenarios.py --steps 3000 --seeds 11 22 33 44 55 --output traffic_benchmark_matrix.json\n```\n\nThe five scenarios and reporting limitations are documented in `docs/benchmark_protocol.md`. The CI workflow is configured to upload JSON reports as a workflow artifact when a run succeeds.\n\n## Optional generic synthesis check
 
 If Yosys is installed, run from the repository root:
 
