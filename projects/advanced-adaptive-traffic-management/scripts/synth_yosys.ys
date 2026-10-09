@@ -1,0 +1,12 @@
+# Run from the repository root:
+#   yosys -s projects/advanced-adaptive-traffic-management/scripts/synth_yosys.ys
+# This is a generic synthesis/check flow, not FPGA place-and-route or timing closure.
+read_verilog -sv projects/advanced-adaptive-traffic-management/rtl/advanced_traffic_management_controller.sv
+read_verilog -sv projects/advanced-adaptive-traffic-management/rtl/axi4lite_traffic_registers.sv
+read_verilog -sv projects/advanced-adaptive-traffic-management/rtl/traffic_management_soc_top.sv
+hierarchy -check -top traffic_management_soc_top
+proc
+opt
+check
+stat
+write_verilog -noattr build/traffic-management/traffic_management_netlist.v
