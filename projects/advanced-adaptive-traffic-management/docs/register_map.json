@@ -1,0 +1,50 @@
+{
+  "peripheral": "advanced_adaptive_traffic_management",
+  "addressing": "byte offsets from platform-assigned peripheral base",
+  "registers": [
+    {
+      "name": "CONTROL",
+      "offset": "0x00",
+      "access": "RW",
+      "bits": {
+        "0": "sensor_data_valid",
+        "1": "ns_emergency_request",
+        "2": "ew_emergency_request",
+        "3": "ped_ns_request",
+        "4": "ped_ew_request"
+      }
+    },
+    {
+      "name": "DEMAND",
+      "offset": "0x04",
+      "access": "RW",
+      "bits": {
+        "3:0": "north_south_demand",
+        "7:4": "east_west_demand"
+      }
+    },
+    {
+      "name": "STATUS",
+      "offset": "0x08",
+      "access": "RO",
+      "bits": {
+        "1:0": "north_south_light_encoding",
+        "3:2": "east_west_light_encoding",
+        "4": "ped_walk_ns",
+        "5": "ped_walk_ew",
+        "6": "emergency_active",
+        "7": "fault_active"
+      }
+    },
+    {
+      "name": "DEBUG",
+      "offset": "0x0C",
+      "access": "RO",
+      "bits": {
+        "3:0": "controller_state",
+        "11:4": "phase_timer"
+      }
+    }
+  ],
+  "note": "Educational implementation; confirm actual RTL packing and verify with a simulator before hardware integration."
+}
