@@ -127,7 +127,11 @@ yosys -s projects/advanced-adaptive-traffic-management/scripts/synth_yosys.ys
 
 This script performs hierarchy, process lowering, optimization, structural checks, and statistics, then writes a generic netlist under `build/traffic-management/`. It is **not** FPGA-specific synthesis, place-and-route, timing closure, or proof of correct behavior. Review all warnings and the generated report.
 
-## FPGA constraints template\n\n`constraints/traffic_management_template.xdc` is a placeholder only. Pin assignments, I/O standards, clock period, and external delays must be filled using the exact board documentation before FPGA implementation. It is not a ready-to-run board constraint file.\n\n## Firmware example
+## FPGA constraints template
+
+`constraints/traffic_management_template.xdc` is a placeholder only. Pin assignments, I/O standards, clock period, and external delays must be filled using the exact board documentation before FPGA implementation. It is not a ready-to-run board constraint file.
+
+## Firmware example
 
 The C example uses a placeholder peripheral base address. Replace it with the actual address from the target platform's memory map before running it on a processor. The repository does not currently provide a complete RISC-V CPU subsystem, linker script, board support package, or FPGA bitstream.
 
