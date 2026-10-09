@@ -117,6 +117,7 @@ An educational SystemVerilog traffic-control subsystem with adaptive timing, AXI
 - [Multi-scenario benchmark runner](projects/advanced-adaptive-traffic-management/software/sim/benchmark_scenarios.py)
 - [Benchmark protocol](projects/advanced-adaptive-traffic-management/docs/benchmark_protocol.md)
 - [Integration architecture](projects/advanced-adaptive-traffic-management/docs/integration_architecture.md)
+- [Next-stage engineering plan](projects/advanced-adaptive-traffic-management/docs/next_stage_plan.md)
 - [Digital twin simulator](projects/advanced-adaptive-traffic-management/software/sim/traffic_digital_twin.py)
 - [Browser dashboard](projects/advanced-adaptive-traffic-management/software/dashboard/index.html)
 - [Digital twin unit tests](projects/advanced-adaptive-traffic-management/software/sim/test_traffic_digital_twin.py)
