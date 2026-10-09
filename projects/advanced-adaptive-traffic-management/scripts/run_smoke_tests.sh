@@ -15,7 +15,7 @@ if ! command -v iverilog >/dev/null 2>&1 || ! command -v vvp >/dev/null 2>&1; th
   exit 2
 fi
 
-echo "[1/2] Compile and run controller testbench"
+echo "[1/4] Compile and run controller testbench"
 iverilog -g2012 -s tb_advanced_traffic_management_controller \
   -o "$BUILD_DIR/controller_tb" \
   "$RTL_DIR/advanced_traffic_management_controller.sv" \
@@ -25,7 +25,7 @@ iverilog -g2012 -s tb_advanced_traffic_management_controller \
   vvp ./controller_tb
 )
 
-echo "[2/2] Compile and run AXI/SoC smoke testbench"
+echo "[2/4] Compile and run AXI/SoC smoke testbench"
 iverilog -g2012 -s tb_traffic_management_axi \
   -o "$BUILD_DIR/axi_tb" \
   "$RTL_DIR/advanced_traffic_management_controller.sv" \
