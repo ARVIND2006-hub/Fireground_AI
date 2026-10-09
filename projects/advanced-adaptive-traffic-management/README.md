@@ -73,6 +73,7 @@ The repository provides the processor-facing peripheral and example firmware, bu
 - `docs/performance_metrics.md` — definitions and limitations of digital-twin metrics.
 - `docs/integration_architecture.md` — sensor-to-watchdog-to-controller signal path.
 - `docs/benchmark_protocol.md` — reproducible experiment instructions.
+- `docs/next_stage_plan.md` — next-stage processor, verification, and FPGA plan.
 - `constraints/traffic_management_template.xdc` — placeholder-only FPGA timing constraint template.
 - `scripts/run_smoke_tests.sh` — local Icarus Verilog smoke-test runner.
 - `scripts/check_register_map.py` — dependency-free JSON/RTL/C register-offset consistency check.
