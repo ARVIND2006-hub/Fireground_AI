@@ -22,3 +22,14 @@
 
 ## Validation status
 These files were committed to GitHub, but no HDL simulation, SVA/formal verification, Yosys synthesis, FPGA implementation, or hardware test has been executed by the assistant. Check actual CI results and run the appropriate tools before reporting validation.
+
+
+### Additional advanced extensions
+- Added standalone sensor front-end RTL with synchronized vehicle events, debounced human inputs, saturating demand estimates, and slow decay.
+- Added standalone heartbeat/sensor-valid watchdog diagnostic RTL.
+- Added unit-test benches for both new RTL modules and extended the smoke-test runner.
+- Added a seeded Python queueing digital twin comparing fixed and adaptive signal policies, with unit tests and JSON metrics output.
+- Added CI steps for Python tests and a sample digital-twin run.
+- Added FPGA constraint template, bring-up checklist, and performance-metric definitions.
+
+Validation remains pending: the assistant has not executed HDL simulation, Python tests, synthesis, place-and-route, or physical hardware tests. CI results must be checked before claiming a pass.
