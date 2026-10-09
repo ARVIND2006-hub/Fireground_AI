@@ -15,7 +15,7 @@ if ! command -v iverilog >/dev/null 2>&1 || ! command -v vvp >/dev/null 2>&1; th
   exit 2
 fi
 
-echo "[1/4] Compile and run controller testbench"
+echo "[1/5] Compile and run controller testbench"
 iverilog -g2012 -s tb_advanced_traffic_management_controller \
   -o "$BUILD_DIR/controller_tb" \
   "$RTL_DIR/advanced_traffic_management_controller.sv" \
@@ -25,7 +25,7 @@ iverilog -g2012 -s tb_advanced_traffic_management_controller \
   vvp ./controller_tb
 )
 
-echo "[2/4] Compile and run AXI/SoC smoke testbench"
+echo "[2/5] Compile and run AXI/SoC smoke testbench"
 iverilog -g2012 -s tb_traffic_management_axi \
   -o "$BUILD_DIR/axi_tb" \
   "$RTL_DIR/advanced_traffic_management_controller.sv" \
@@ -37,7 +37,7 @@ iverilog -g2012 -s tb_traffic_management_axi \
   vvp ./axi_tb
 )
 
-echo "[3/4] Compile and run sensor frontend testbench"
+echo "[3/5] Compile and run sensor frontend testbench"
 iverilog -g2012 -s tb_traffic_sensor_frontend \
   -o "$BUILD_DIR/sensor_tb" \
   "$RTL_DIR/traffic_sensor_frontend.sv" \
@@ -47,7 +47,7 @@ iverilog -g2012 -s tb_traffic_sensor_frontend \
   vvp ./sensor_tb
 )
 
-echo "[4/4] Compile and run watchdog testbench"
+echo "[4/5] Compile and run watchdog testbench"
 iverilog -g2012 -s tb_traffic_watchdog \
   -o "$BUILD_DIR/watchdog_tb" \
   "$RTL_DIR/traffic_watchdog.sv" \
@@ -55,6 +55,19 @@ iverilog -g2012 -s tb_traffic_watchdog \
 (
   cd "$BUILD_DIR"
   vvp ./watchdog_tb
+)
+
+echo "[5/5] Compile and run integrated physical-top smoke test"
+iverilog -g2012 -s tb_traffic_management_physical_top \
+  -o "$BUILD_DIR/physical_top_tb" \
+  "$RTL_DIR/advanced_traffic_management_controller.sv" \
+  "$RTL_DIR/traffic_sensor_frontend.sv" \
+  "$RTL_DIR/traffic_watchdog.sv" \
+  "$RTL_DIR/traffic_management_physical_top.sv" \
+  "$VERIFY_DIR/tb_traffic_management_physical_top.sv"
+(
+  cd "$BUILD_DIR"
+  vvp ./physical_top_tb
 )
 
 echo "Smoke-test commands completed. Review all logs and waveforms; this script does not perform formal verification or FPGA synthesis."
