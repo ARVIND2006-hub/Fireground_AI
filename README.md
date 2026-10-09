@@ -93,3 +93,15 @@ python3 dashboard/fireground_dashboard.py
 
 source /home/arvind/VectorBlox-SDK/setup_vars.sh
 python3 src/live_vnnx_fireground_system.py
+
+## Additional ECE / VLSI Project
+
+### Advanced Adaptive Traffic Management Controller
+An educational SystemVerilog RTL project featuring demand-adaptive green timing, emergency and pedestrian request capture, startup all-red sequencing, fault-latched outputs, simulation monitors, and assertion-based checks.
+
+- [Project documentation](projects/advanced-adaptive-traffic-management/README.md)
+- [Controller RTL](projects/advanced-adaptive-traffic-management/rtl/advanced_traffic_management_controller.sv)
+- [Verification testbench](projects/advanced-adaptive-traffic-management/verification/tb_advanced_traffic_management_controller.sv)
+- [SystemVerilog assertions](projects/advanced-adaptive-traffic-management/verification/advanced_traffic_management_sva.sv)
+
+This is an educational RTL prototype. Simulation, formal verification, synthesis, timing analysis, and FPGA validation are not claimed until run and documented.
