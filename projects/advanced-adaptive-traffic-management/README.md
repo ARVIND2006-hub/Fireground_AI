@@ -45,8 +45,8 @@ The repository provides the processor-facing peripheral and example firmware, bu
 - `software/include/traffic_regs.h` — C register definitions and helper functions.
 - `software/examples/traffic_demo.c` — illustrative firmware skeleton.
 - `docs/register_map.json` — machine-readable register map.
-- `docs/system_architecture.md` — architecture, integration steps, and limitations.
-- `scripts/run_smoke_tests.sh` — local Icarus Verilog smoke-test runner.
+- `docs/system_architecture.md` — architecture, integration steps, and limitations.\n- `docs/verification_matrix.md` — evidence matrix and release readiness gates.
+- `scripts/run_smoke_tests.sh` — local Icarus Verilog smoke-test runner.\n- `scripts/check_register_map.py` — dependency-free JSON/RTL/C register-offset consistency check.
 - `.github/workflows/traffic-management-smoke.yml` — CI smoke-test workflow.
 
 ## AXI4-Lite register map
@@ -83,7 +83,7 @@ Compile/elaborate the SoC RTL:
 iverilog -g2012 -s traffic_management_soc_top -o soc_elab projects/advanced-adaptive-traffic-management/rtl/advanced_traffic_management_controller.sv projects/advanced-adaptive-traffic-management/rtl/axi4lite_traffic_registers.sv projects/advanced-adaptive-traffic-management/rtl/traffic_management_soc_top.sv
 ```
 
-The CI workflow is configured to attempt the smoke-test script on relevant pushes and pull requests. A committed workflow file is not proof that a run passed; inspect the Actions result for the actual outcome.
+The CI workflow is configured to run the register-map consistency check and attempt the smoke-test script on relevant pushes and pull requests. A committed workflow file is not proof that a run passed; inspect the Actions result for the actual outcome.
 
 ## Firmware example
 
