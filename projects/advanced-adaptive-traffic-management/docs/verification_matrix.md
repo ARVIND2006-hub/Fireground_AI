@@ -4,6 +4,8 @@
 |---|---|---|---|
 | Controller behavior | Controller testbench | Directed and randomized inputs; output interlock monitors | Full state/transition coverage, formal proof, all corner cases |
 | AXI register access | AXI smoke testbench | Basic reads/writes of demand/control/status/debug registers | Full AXI4-Lite protocol compliance and backpressure coverage |
+| Sensor front end | Sensor testbench | Basic vehicle-event demand increment and button debounce behavior | Metastability analysis, exhaustive bounce sequences, calibrated sensor performance |
+| Watchdog | Watchdog testbench | Basic heartbeat timeout and invalid-sensor fault latching | System-level fault injection and integrated safe-state response |
 | Register documentation | Static Python checker | JSON, RTL, and C header register offsets agree | All bitfields and access semantics match automatically |
 | Continuous integration | GitHub Actions workflow | Attempts to run smoke tests on relevant pushes/PRs | A passing run until a run result is available |
 | SVA | Assertion checker source | Properties are written for an SVA-capable simulator | Assertions compiled and proven by a compatible tool |
