@@ -1,6 +1,6 @@
 # Advanced Adaptive Traffic Management Controller
 
-An educational SystemVerilog RTL project for a two-road intersection controller. It combines demand-adaptive timing, emergency and pedestrian request capture, startup all-red sequencing, fault latching, debug outputs, simulation monitors, and assertion properties.
+An educational SystemVerilog traffic-management subsystem with a demand-adaptive two-road controller, an AXI4-Lite register bank, and a processor-facing top-level wrapper. It demonstrates control RTL, memory-mapped configuration/status, emergency and pedestrian requests, fault latching, simulation monitors, and assertion properties.
 
 > **Safety disclaimer:** This is an educational prototype, not a certified traffic controller. Do not connect it to public-road traffic signals.
 
@@ -14,7 +14,7 @@ An educational SystemVerilog RTL project for a two-road intersection controller.
 7. Timer width derived from the longest configured phase.
 8. Debug outputs for state and timer waveform inspection.
 9. Directed and randomized simulation scenarios.
-10. SystemVerilog assertions for key output-safety properties.
+10. SystemVerilog assertions for key output-safety properties.\n11. AXI4-Lite memory-mapped control and status interface for a soft processor or external bus master.\n12. Top-level SoC wrapper connecting the register bank to the controller.
 
 ## Files
 - `rtl/advanced_traffic_management_controller.sv` — controller RTL.
