@@ -38,6 +38,7 @@ The repository provides the processor-facing peripheral and example firmware, bu
 15. Dedicated unit-test benches for the sensor front end and watchdog.
 16. Python digital twin to compare a fixed-time baseline against a queue-aware adaptive policy.
 17. Unit tests for deterministic digital-twin behavior and accounting sanity.
+18. Browser-based dashboard to visualize JSON simulation reports without a server.
 
 ## Source layout
 
@@ -56,6 +57,7 @@ The repository provides the processor-facing peripheral and example firmware, bu
 - `software/examples/traffic_demo.c` — illustrative firmware skeleton.
 - `software/sim/traffic_digital_twin.py` — configurable queueing simulation and JSON report generator.
 - `software/sim/test_traffic_digital_twin.py` — unit tests for the simulation.
+- `software/dashboard/index.html` — local browser dashboard for JSON report visualization.
 - `docs/register_map.json` — machine-readable register map.
 - `docs/system_architecture.md` — architecture, integration steps, and limitations.
 - `docs/verification_matrix.md` — evidence matrix and release readiness gates.
@@ -113,7 +115,7 @@ python3 projects/advanced-adaptive-traffic-management/software/sim/traffic_digit
 python3 -m unittest discover -s projects/advanced-adaptive-traffic-management/software/sim -p "test_*.py"
 ```
 
-The model compares a fixed-time baseline with a queue-aware adaptive policy under the same seeded arrivals and emits a JSON report with arrivals, vehicles served, residual queue, an approximate queue-delay metric, maximum queue, and signal-switch count. This is a **toy queueing model**, not a calibrated traffic simulator; benchmark results are not evidence of real-world improvements. Metric definitions and experiment guidance are in `docs/performance_metrics.md`. It is software-only and does not yet exchange live signals with the RTL.
+The model compares a fixed-time baseline with a queue-aware adaptive policy under the same seeded arrivals and emits a JSON report with arrivals, vehicles served, residual queue, an approximate queue-delay metric, maximum queue, and signal-switch count. This is a **toy queueing model**, not a calibrated traffic simulator; benchmark results are not evidence of real-world improvements. Metric definitions and experiment guidance are in `docs/performance_metrics.md`. Open `software/dashboard/index.html` in a browser and load the generated JSON file to visualize a run. The dashboard's built-in sample uses explicitly marked placeholder values, not measured results. It is software-only and does not yet exchange live signals with the RTL.
 
 ## Optional generic synthesis check
 
