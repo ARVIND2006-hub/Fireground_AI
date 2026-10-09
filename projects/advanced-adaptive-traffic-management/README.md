@@ -49,6 +49,8 @@ The repository provides the processor-facing peripheral and example firmware, bu
 - `docs/verification_matrix.md` — evidence matrix and release readiness gates.
 - `scripts/run_smoke_tests.sh` — local Icarus Verilog smoke-test runner.
 - `scripts/check_register_map.py` — dependency-free JSON/RTL/C register-offset consistency check.
+- `scripts/synth_yosys.ys` — optional Yosys generic synthesis/structural-check script.
+- `.gitignore` — ignores local build and waveform outputs.
 - `.github/workflows/traffic-management-smoke.yml` — CI smoke-test workflow.
 
 ## AXI4-Lite register map
@@ -86,6 +88,16 @@ iverilog -g2012 -s traffic_management_soc_top -o soc_elab projects/advanced-adap
 ```
 
 The CI workflow is configured to run the register-map consistency check and attempt the smoke-test script on relevant pushes and pull requests. A committed workflow file is not proof that a run passed; inspect the Actions result for the actual outcome.
+
+## Optional generic synthesis check
+
+If Yosys is installed, run from the repository root:
+
+```bash
+yosys -s projects/advanced-adaptive-traffic-management/scripts/synth_yosys.ys
+```
+
+This script performs hierarchy, process lowering, optimization, structural checks, and statistics, then writes a generic netlist under `build/traffic-management/`. It is **not** FPGA-specific synthesis, place-and-route, timing closure, or proof of correct behavior. Review all warnings and the generated report.
 
 ## Firmware example
 
